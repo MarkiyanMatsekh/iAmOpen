@@ -1,0 +1,7 @@
+D:\Stuff\work\iAmOpen\WebApp\Iamopen\Iamopen\bin\Iamopen.dll
+D:\Stuff\work\iAmOpen\WebApp\Iamopen\Iamopen\bin\Iamopen.pdb
+D:\Stuff\work\iAmOpen\WebApp\Iamopen\Iamopen\bin\EntityFramework.dll
+D:\Stuff\work\iAmOpen\WebApp\Iamopen\Iamopen\bin\EntityFramework.xml
+D:\Stuff\work\iAmOpen\WebApp\Iamopen\Iamopen\obj\Debug\ResolveAssemblyReference.cache
+D:\Stuff\work\iAmOpen\WebApp\Iamopen\Iamopen\obj\Debug\Iamopen.dll
+D:\Stuff\work\iAmOpen\WebApp\Iamopen\Iamopen\obj\Debug\Iamopen.pdb
