@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen", "Iamopen\Iamopen.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.Tests", "Iamopen.Tests\Iamopen.Tests.csproj", "{7B2C153A-75E2-468D-95A4-FFC830FD8071}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IAmOpen.Model", "Iamopen.Model\IAmOpen.Model.csproj", "{780B5144-BE79-4758-8599-02270E272482}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{7B2C153A-75E2-468D-95A4-FFC830FD8071}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B2C153A-75E2-468D-95A4-FFC830FD8071}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B2C153A-75E2-468D-95A4-FFC830FD8071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{780B5144-BE79-4758-8599-02270E272482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{780B5144-BE79-4758-8599-02270E272482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{780B5144-BE79-4758-8599-02270E272482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{780B5144-BE79-4758-8599-02270E272482}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
