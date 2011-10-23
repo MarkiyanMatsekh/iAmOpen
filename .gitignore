@@ -1,6 +1,5 @@
 
-IAmOpen2/IAmOpen/_ReSharper*
-WebApp/Iamopen/_ReSharper*
 WebApp/_ReSharper*
 WebApp/Iamopen/bin/*
 WebApp/Iamopen/obj/*
+*_UPDATE.log
