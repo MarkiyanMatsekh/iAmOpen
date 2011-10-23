@@ -4,3 +4,6 @@ WebApp/Iamopen/bin/*
 WebApp/Iamopen/obj/*
 *_UPDATE.log
 WebApp/lib/*.xml
+bin/
+obj/
+*ReSharper*
