@@ -48,6 +48,10 @@
   <ItemGroup>
     <Compile Include="Abstractions\IInstitutionRepository.cs" />
     <Compile Include="Abstractions\GenericRepository.cs" />
+    <Compile Include="Abstractions\Test\IGeneric.cs" />
+    <Compile Include="Abstractions\Test\MockRepository.cs" />
+    <Compile Include="Abstractions\Test\Mocks\InstitutionMockRepository.cs" />
+    <Compile Include="Abstractions\Test\NormalRepository.cs" />
     <Compile Include="Abstractions\UnitOfWork.cs" />
     <Compile Include="DAL\InstitutionContext.cs" />
     <Compile Include="DAL\InstitutionInitializer.cs" />

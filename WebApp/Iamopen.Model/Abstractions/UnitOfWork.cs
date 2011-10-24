@@ -10,6 +10,7 @@ namespace IAmOpen.Model.Abstractions
     public class UnitOfWork: IDisposable
     {
         private InstitutionContext context = new InstitutionContext();
+
         private GenericRepository<Institution> institutionRepository;
         private GenericRepository<InstitutionType> institutionTypeRepository;
         private GenericRepository<User> userRepository;
