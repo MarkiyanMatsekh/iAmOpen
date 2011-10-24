@@ -1,11 +1,11 @@
-﻿#region
+#region
 
 using System.Data.Entity;
 using IAmOpen.Model.Models;
 
 #endregion
 
-namespace IAmOpen.Model.DAL
+namespace IAmOpen.Model.Concrete
 {
     public class InstitutionContext : DbContext
     {
@@ -19,8 +19,8 @@ namespace IAmOpen.Model.DAL
         public DbSet<Review> Reviews { get; set; }
         public DbSet<UserExternalAccountToken> ExternalAccountTokens { get; set; }
         public DbSet<Status> Statuses { get; set; }
-        public DbSet<Role> Roles { get; set; }
         public DbSet<State> States { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

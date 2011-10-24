@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -46,16 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstractions\IInstitutionRepository.cs" />
-    <Compile Include="Abstractions\GenericRepository.cs" />
-    <Compile Include="Abstractions\Test\IGeneric.cs" />
-    <Compile Include="Abstractions\Test\MockRepository.cs" />
-    <Compile Include="Abstractions\Test\Mocks\InstitutionMockRepository.cs" />
-    <Compile Include="Abstractions\Test\NormalRepository.cs" />
-    <Compile Include="Abstractions\UnitOfWork.cs" />
-    <Compile Include="DAL\InstitutionContext.cs" />
-    <Compile Include="DAL\InstitutionInitializer.cs" />
-    <Compile Include="DAL\DBInstitutionRepository.cs" />
+    <Compile Include="Abstractions\IUnitOfWork.cs" />
+    <Compile Include="Concrete\DBGenericRepository.cs" />
+    <Compile Include="Abstractions\IGenericRepository.cs" />
+    <Compile Include="Concrete\DBUnitOfWork.cs" />
+    <Compile Include="Concrete\InstitutionContext.cs" />
+    <Compile Include="Initialization\InstitutionInitializer.cs" />
     <Compile Include="Models\Chain.cs" />
     <Compile Include="Models\ExternalAccount.cs" />
     <Compile Include="Models\Institution.cs" />

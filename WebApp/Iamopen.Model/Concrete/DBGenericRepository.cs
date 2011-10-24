@@ -1,20 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using IAmOpen.Model.DAL;
+using IAmOpen.Model.Abstractions;
 using System.Linq.Expressions;
 using System.Data;
 using System.Data.Entity;
 
-namespace IAmOpen.Model.Abstractions
+namespace IAmOpen.Model.Concrete
 {
-    public class GenericRepository<TEntity> where TEntity : class
+    public class DBGenericRepository
+        <TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        internal InstitutionContext context;
-        internal DbSet<TEntity> dbSet;
+        private readonly InstitutionContext context;
+        private readonly DbSet<TEntity> dbSet;
 
-        public GenericRepository(InstitutionContext context)
+        public DBGenericRepository(InstitutionContext context)
         {
             this.context = context;
             this.dbSet = context.Set<TEntity>();
