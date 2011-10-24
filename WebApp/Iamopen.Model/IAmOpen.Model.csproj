@@ -46,12 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstractions\IInstitutionRepository.cs" />
-    <Compile Include="Abstractions\GenericRepository.cs" />
-    <Compile Include="Abstractions\UnitOfWork.cs" />
-    <Compile Include="DAL\InstitutionContext.cs" />
-    <Compile Include="DAL\InstitutionInitializer.cs" />
-    <Compile Include="DAL\DBInstitutionRepository.cs" />
+    <Compile Include="Abstractions\IUnitOfWork.cs" />
+    <Compile Include="Concrete\DBGenericRepository.cs" />
+    <Compile Include="Abstractions\IGenericRepository.cs" />
+    <Compile Include="Concrete\DBUnitOfWork.cs" />
+    <Compile Include="Concrete\InstitutionContext.cs" />
+    <Compile Include="Initialization\InstitutionInitializer.cs" />
     <Compile Include="Models\Chain.cs" />
     <Compile Include="Models\ExternalAccount.cs" />
     <Compile Include="Models\Institution.cs" />
