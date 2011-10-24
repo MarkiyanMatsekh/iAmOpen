@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using IAmOpen.Model.Abstractions;
 using IAmOpen.Model.Models;
 
-namespace IAmOpen.Model.Concrete
+namespace IAmOpen.Model.Concrete.Database
 {
     public class DBUnitOfWork : IUnitOfWork
     {

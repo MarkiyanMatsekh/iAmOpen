@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using IAmOpen.Model.Concrete;
+using IAmOpen.Model.Concrete.Database;
 using IAmOpen.Model.Models;
 
 namespace IAmOpen.Model.Initialization

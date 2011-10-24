@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using IAmOpen.Model.Abstractions;
 using System.Linq.Expressions;
 using System.Data;
 using System.Data.Entity;
 
-namespace IAmOpen.Model.Concrete
+namespace IAmOpen.Model.Concrete.Database
 {
     public class DBGenericRepository
         <TEntity> : IGenericRepository<TEntity> where TEntity : class

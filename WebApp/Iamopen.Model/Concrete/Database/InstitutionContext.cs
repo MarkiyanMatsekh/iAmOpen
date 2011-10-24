@@ -5,7 +5,7 @@ using IAmOpen.Model.Models;
 
 #endregion
 
-namespace IAmOpen.Model.Concrete
+namespace IAmOpen.Model.Concrete.Database
 {
     public class InstitutionContext : DbContext
     {
