@@ -1,18 +1,25 @@
-Дії користувача, які потрібно буде імплементнути(по пріоритету)
-1.  Знайти місце
-2.  Переглянути деталі місця
-3.  Зайти в систему(через соц мережі)
-4.  Додати нове місце
-5.  Проголосувати за місце
-6.  Додати місце до "своїх місць"
-7.  Переглянути "свої місця"
-8.  Переглянути місця, за які голосував
-9.  Дозволити/заборонити іншим дивитися свої місця
-10. Переглянути місця іншого юзера
-11. Написати відгук про місце
-12. Надіслати запит до адміна про застарілі дані про місце
-13. Змерджити зовнішні екаунти(тут багато гємору, того це на колись, коли руки дійдуть)
-    а) знайти з яким саме юзером якого екаунту мерджитися
-    б) подати заявку на мердж з таким дядьком
-    в) Залогінитися під тим іншим, підтвердити заявку
-    4) брудна робота на базі - проапдейтити всі референси.
+These are main user actions, which should be implemented(sorted by priority)
+1.  Find the place
+    a) by name
+    b) by type(cafe, bowling, pizza etc(every institution can be of multiple types))
+    c) by chain(like silpo etc)
+    d) by location(some limiting figure on the map)
+    e) by status(brand-new, on renovation etc)
+    f) by rating(not lower than-)
+    g) by time of work(the most important)
+2.  View details of institution
+3.  Authenticate via external system
+4.  Add new place
+5.  Vote for a place
+6.  Add an institution to his favorites
+7.  Review his places
+8.  Review the places, which he voted for
+9.  Grant/deny other users to view his places
+10. View other user places
+11. Write some notes about an institution
+12. Send a request to administrator that the information about the palce is too old
+13. Merge few external accounts(too hard to do at the moment)
+    a) find the user to merge with
+    b) apply for merging the account with that user
+    c) log in as other user and submit the merge
+    d) dirty database work
