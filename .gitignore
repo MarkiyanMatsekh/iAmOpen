@@ -7,3 +7,4 @@ WebApp/lib/*.xml
 bin/
 obj/
 *ReSharper*
+WebApp/Iamopen.suo
