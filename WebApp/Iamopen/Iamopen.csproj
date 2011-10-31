@@ -110,6 +110,12 @@
   <ItemGroup>
     <Content Include="Views\Test\Index.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Iamopen.Model\IAmOpen.Model.csproj">
+      <Project>{780B5144-BE79-4758-8599-02270E272482}</Project>
+      <Name>IAmOpen.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
