@@ -1,1 +1,1 @@
-_buildSite Debug D:\Stuff\work\iAmOpen\WebApp D:\temp\iamopen
+_buildSite Debug Q:\iAmOpen\iAmOpen\WebApp C:\temp\iamopen
