@@ -7,6 +7,5 @@ WebApp/lib/*.xml
 bin/
 obj/
 *ReSharper*
-WebApp/Iamopen.suo
-WebApp/Iamopen.suo
+*.suo
 *.csproj.user
