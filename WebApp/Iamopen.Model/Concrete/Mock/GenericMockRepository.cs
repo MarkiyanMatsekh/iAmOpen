@@ -10,7 +10,7 @@ namespace IAmOpen.Model.Concrete.Mock
     {
         protected abstract List<T> _collection { get; }
 
-        protected abstract void UpdateEntityID(T entity);
+        protected abstract void UpdateEntityIDBeforeAddingToCollection(T entity);
 
         public virtual IEnumerable<T> Get(
             Expression<Func<T, bool>> filter = null,
@@ -39,7 +39,7 @@ namespace IAmOpen.Model.Concrete.Mock
         {
             if (!_collection.Contains(entity))
             {
-                UpdateEntityID(entity);
+                UpdateEntityIDBeforeAddingToCollection(entity);
                 _collection.Add(entity);
             }
         }

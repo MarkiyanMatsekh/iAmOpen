@@ -23,7 +23,7 @@ namespace IAmOpen.Model.Concrete.Mock.MockRepositories
                 _collection[index] = entityToUpdate;
         }
 
-        protected override void UpdateEntityID(Institution entity)
+        protected override void UpdateEntityIDBeforeAddingToCollection(Institution entity)
         {
             var lastID = _collection[_collection.Count - 1].InstitutionID;
             entity.InstitutionID = ++lastID;
