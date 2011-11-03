@@ -1,14 +1,11 @@
-﻿#region
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-
-#endregion
+using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Models
 {
-    public class Institution
+    public class Institution : EquatableEntity
     {
         public int InstitutionID { get; set; }
 
@@ -26,14 +23,17 @@ namespace IAmOpen.Model.Models
 
         [Display(Name = "Creator")]
         public int UserID { get; set; }
+
         public virtual User CreatedByUser { get; set; }
 
         [Display(Name = "Status")]
         public int StatusID { get; set; }
+
         public virtual Status Status { get; set; }
 
         [Display(Name = "State")]
         public int StateID { get; set; }
+
         public virtual State State { get; set; }
 
         public double Rating { get; set; }
@@ -48,6 +48,13 @@ namespace IAmOpen.Model.Models
 
         [Display(Name = "Belongs to chain")]
         public int? ChainID { get; set; }
+
         public virtual Chain Chain { get; set; }
+
+        public override object EntityID
+        {
+            get { return InstitutionID; }
+            set { InstitutionID = (int) value; }
+        }
     }
 }

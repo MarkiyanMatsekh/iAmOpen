@@ -50,7 +50,7 @@
             @Html.LabelFor(model => model.UserID)
         </div>
         <div class="editor-field">
-            @Html.DropDownList("UserID", String.Empty)
+            @*@Html.DropDownList("UserID", String.Empty)*@ @*this code is throwing runtime exception somewhy*@
             @Html.ValidationMessageFor(model => model.UserID)
         </div>
 

@@ -1,22 +1,27 @@
 ﻿#region
 
+
 using System;
 using System.ComponentModel.DataAnnotations;
+using IAmOpen.Model.Models.Base;
+
 
 #endregion
 
+
 namespace IAmOpen.Model.Models
 {
-    public class WorkTime
+    public class WorkTime : EquatableEntity
     {
         [Key]
         public int WorkTimeID { get; set; }
 
         [Required(ErrorMessage = "Institution is required!")]
         public int InstitutionID { get; set; }
+
         public virtual Institution Institution { get; set; }
 
-        [Range(0,6,ErrorMessage="Day should be in range from 0 to 6!")]
+        [Range(0, 6, ErrorMessage = "Day should be in range from 0 to 6!")]
         [Display(Name = "Day Of Week")]
         public int? DayOfWeekID { get; set; }
 
@@ -29,5 +34,11 @@ namespace IAmOpen.Model.Models
         [Required(ErrorMessage = "Closing Time is required!")]
         [Display(Name = "Closing Time")]
         public TimeSpan ClosingTime { get; set; }
+
+        public override object EntityID
+        {
+            get { return WorkTimeID; }
+            set { WorkTimeID = (int) value; }
+        }
     }
 }

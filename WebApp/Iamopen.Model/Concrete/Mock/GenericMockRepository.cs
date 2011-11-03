@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using IAmOpen.Model.Abstractions;
+using IAmOpen.Model.Models;
+using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Concrete.Mock
 {
-    public abstract class GenericMockRepository<T> : IGenericRepository<T> where T : class
+    public abstract class GenericMockRepository<T> : IGenericRepository<T> where T : EquatableEntity
     {
         protected abstract List<T> _collection { get; }
-
-        protected abstract void UpdateEntityIDBeforeAddingToCollection(T entity);
 
         public virtual IEnumerable<T> Get(
             Expression<Func<T, bool>> filter = null,
@@ -33,7 +33,10 @@ namespace IAmOpen.Model.Concrete.Mock
             return orderBy != null ? orderBy(query).ToList() : query.ToList();
         }
 
-        public abstract T GetByID(object id);
+        public virtual T GetByID(object id)
+        {
+            return _collection.Find(c => c.EntityID.Equals(id));
+        }
 
         public virtual void Insert(T entity)
         {
@@ -58,6 +61,19 @@ namespace IAmOpen.Model.Concrete.Mock
             }
         }
 
-        public abstract void Update(T entityToUpdate);
+        public virtual void Update(T entityToUpdate)
+        {
+            int index = _collection.FindIndex(p => p.EntityID.Equals(entityToUpdate.EntityID));
+            if (index >= 0)
+                _collection[index] = entityToUpdate;
+        }
+        // current version works only for integers
+        //todo MM: consider transition to generics to avoid such uncertainties
+        protected virtual void UpdateEntityIDBeforeAddingToCollection(T entity)
+        {
+            var lastID = (int)_collection[_collection.Count - 1].EntityID;
+            entity.EntityID = ++lastID;
+        }
+
     }
 }
