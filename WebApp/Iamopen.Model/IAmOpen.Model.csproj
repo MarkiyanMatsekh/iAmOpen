@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -51,7 +51,12 @@
     <Compile Include="Abstractions\IGenericRepository.cs" />
     <Compile Include="Concrete\Database\DBUnitOfWork.cs" />
     <Compile Include="Concrete\Database\InstitutionContext.cs" />
-    <Compile Include="Concrete\Mock\MockGenericRepository.cs" />
+    <Compile Include="Concrete\Mock\MockData.cs" />
+    <Compile Include="Concrete\Mock\MockRepositories\ChainMockRepository.cs" />
+    <Compile Include="Concrete\Mock\MockRepositories\InstitutionMockRepository.cs" />
+    <Compile Include="Concrete\Mock\MockRepositories\StateMockRepository.cs" />
+    <Compile Include="Concrete\Mock\MockRepositories\StatusMockRepository.cs" />
+    <Compile Include="Concrete\Mock\MockRepositories\UserMockRepository.cs" />
     <Compile Include="Concrete\Mock\MockUnitOfWork.cs" />
     <Compile Include="Initialization\InstitutionInitializer.cs" />
     <Compile Include="Models\Chain.cs" />

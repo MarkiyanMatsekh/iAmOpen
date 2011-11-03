@@ -1,0 +1,60 @@
+﻿@model IAmOpen.Model.Models.Institution
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Institution</legend>
+
+    <div class="display-label">IconPath</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IconPath)
+    </div>
+
+    <div class="display-label">CreatedDLC</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CreatedDLC)
+    </div>
+
+    <div class="display-label">CoordinatesX</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CoordinatesX)
+    </div>
+
+    <div class="display-label">CoordinatesY</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CoordinatesY)
+    </div>
+
+    <div class="display-label">UserID</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UserID)
+    </div>
+
+    <div class="display-label">Status</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status.Name)
+    </div>
+
+    <div class="display-label">State</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.State.Name)
+    </div>
+
+    <div class="display-label">Rating</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Rating)
+    </div>
+
+    <div class="display-label">Chain</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Chain.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.InstitutionID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

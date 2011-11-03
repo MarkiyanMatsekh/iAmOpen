@@ -1,1 +1,2 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="Iamopen.MvcApplication" Language="C#" %>
+﻿<%@ Codebehind="Global.asax.cs" Inherits="Iamopen.MvcApplication" Language="C#" %>
+

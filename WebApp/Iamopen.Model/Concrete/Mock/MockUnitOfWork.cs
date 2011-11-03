@@ -3,12 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using IAmOpen.Model.Abstractions;
+using IAmOpen.Model.Concrete.Mock.MockRepositories;
 using IAmOpen.Model.Models;
 
 namespace IAmOpen.Model.Concrete.Mock
 {
-    class MockUnitOfWork  : IUnitOfWork
+    public class MockUnitOfWork  : IUnitOfWork
     {
+        private InstitutionMockRepository institutionRepository;
+        //private DBGenericRepository<InstitutionType> institutionTypeRepository;
+        private UserMockRepository userRepository;
+        private ChainMockRepository chainRepository;
+        //private DBGenericRepository<ExternalAccount> externalAccountRepository;
+        //private DBGenericRepository<WorkTime> workTimeRepository;
+        //private DBGenericRepository<Vote> voteRepository;
+        //private DBGenericRepository<Review> reviewRepository;
+        //private DBGenericRepository<UserExternalAccountToken> userExtAccountRepository;
+        private StatusMockRepository statusRepository;
+        //private DBGenericRepository<Role> roleRepository;
+        private StateMockRepository stateRepository;
+
         public void Dispose()
         {
             throw new NotImplementedException();
@@ -16,7 +30,7 @@ namespace IAmOpen.Model.Concrete.Mock
 
         public IGenericRepository<Institution> InstitutionRepository
         {
-            get { return new MockINstitutionRepository(); }
+            get { return institutionRepository ?? (institutionRepository = new InstitutionMockRepository()); }
         }
 
         public IGenericRepository<InstitutionType> InstitutionTypeRepository
@@ -26,12 +40,12 @@ namespace IAmOpen.Model.Concrete.Mock
 
         public IGenericRepository<User> UserRepository
         {
-            get { throw new NotImplementedException(); }
+            get { return userRepository ?? (userRepository = new UserMockRepository()); }
         }
 
         public IGenericRepository<Chain> ChainRepository
         {
-            get { throw new NotImplementedException(); }
+            get { return chainRepository ?? (chainRepository = new ChainMockRepository()); }
         }
 
         public IGenericRepository<ExternalAccount> ExternalAccountRepository
@@ -61,7 +75,7 @@ namespace IAmOpen.Model.Concrete.Mock
 
         public IGenericRepository<Status> StatusRepository
         {
-            get { throw new NotImplementedException(); }
+            get { return statusRepository ?? (statusRepository = new StatusMockRepository()); }
         }
 
         public IGenericRepository<Role> RoleRepository
@@ -71,12 +85,12 @@ namespace IAmOpen.Model.Concrete.Mock
 
         public IGenericRepository<State> StateRepository
         {
-            get { throw new NotImplementedException(); }
+            get { return stateRepository ?? (stateRepository = new StateMockRepository()); }
         }
 
         public void Save()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

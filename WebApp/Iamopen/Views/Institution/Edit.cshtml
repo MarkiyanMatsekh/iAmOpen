@@ -1,0 +1,99 @@
+﻿@model IAmOpen.Model.Models.Institution
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Institution</legend>
+
+        @Html.HiddenFor(model => model.InstitutionID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IconPath)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IconPath)
+            @Html.ValidationMessageFor(model => model.IconPath)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CreatedDLC)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CreatedDLC)
+            @Html.ValidationMessageFor(model => model.CreatedDLC)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CoordinatesX)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CoordinatesX)
+            @Html.ValidationMessageFor(model => model.CoordinatesX)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CoordinatesY)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CoordinatesY)
+            @Html.ValidationMessageFor(model => model.CoordinatesY)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UserID)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("UserID", String.Empty)
+            @Html.ValidationMessageFor(model => model.UserID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StatusID, "Status")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("StatusID", String.Empty)
+            @Html.ValidationMessageFor(model => model.StatusID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.StateID, "State")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("StateID", String.Empty)
+            @Html.ValidationMessageFor(model => model.StateID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Rating)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Rating)
+            @Html.ValidationMessageFor(model => model.Rating)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ChainID, "Chain")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ChainID", String.Empty)
+            @Html.ValidationMessageFor(model => model.ChainID)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
