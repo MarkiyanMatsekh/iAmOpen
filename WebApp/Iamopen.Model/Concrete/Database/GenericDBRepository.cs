@@ -8,13 +8,13 @@ using System.Data.Entity;
 
 namespace IAmOpen.Model.Concrete.Database
 {
-    public class DBGenericRepository
+    public class GenericDBRepository
         <TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         private readonly InstitutionContext context;
         private readonly DbSet<TEntity> dbSet;
 
-        public DBGenericRepository(InstitutionContext context)
+        public GenericDBRepository(InstitutionContext context)
         {
             this.context = context;
             this.dbSet = context.Set<TEntity>();

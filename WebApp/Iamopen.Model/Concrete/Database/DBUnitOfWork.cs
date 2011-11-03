@@ -8,18 +8,18 @@ namespace IAmOpen.Model.Concrete.Database
     {
         private readonly InstitutionContext context = new InstitutionContext();
 
-        private DBGenericRepository<Institution> institutionRepository;
-        private DBGenericRepository<InstitutionType> institutionTypeRepository;
-        private DBGenericRepository<User> userRepository;
-        private DBGenericRepository<Chain> chainRepository;
-        private DBGenericRepository<ExternalAccount> externalAccountRepository;
-        private DBGenericRepository<WorkTime> workTimeRepository;
-        private DBGenericRepository<Vote> voteRepository;
-        private DBGenericRepository<Review> reviewRepository;
-        private DBGenericRepository<UserExternalAccountToken> userExtAccountRepository;
-        private DBGenericRepository<Status> statusRepository;
-        private DBGenericRepository<Role> roleRepository;
-        private DBGenericRepository<State> stateRepository;
+        private GenericDBRepository<Institution> institutionRepository;
+        private GenericDBRepository<InstitutionType> institutionTypeRepository;
+        private GenericDBRepository<User> userRepository;
+        private GenericDBRepository<Chain> chainRepository;
+        private GenericDBRepository<ExternalAccount> externalAccountRepository;
+        private GenericDBRepository<WorkTime> workTimeRepository;
+        private GenericDBRepository<Vote> voteRepository;
+        private GenericDBRepository<Review> reviewRepository;
+        private GenericDBRepository<UserExternalAccountToken> userExtAccountRepository;
+        private GenericDBRepository<Status> statusRepository;
+        private GenericDBRepository<Role> roleRepository;
+        private GenericDBRepository<State> stateRepository;
 
         public IGenericRepository<Institution> InstitutionRepository
         {
@@ -106,9 +106,9 @@ namespace IAmOpen.Model.Concrete.Database
             GC.SuppressFinalize(this);
         }
 
-        private IGenericRepository<TEntity> CreateIfDoesntExist<TEntity>(ref DBGenericRepository<TEntity> field) where TEntity : class
+        private IGenericRepository<TEntity> CreateIfDoesntExist<TEntity>(ref GenericDBRepository<TEntity> field) where TEntity : class
         {
-            return field ?? (field = new DBGenericRepository<TEntity>(context));
+            return field ?? (field = new GenericDBRepository<TEntity>(context));
         }
     }
 }

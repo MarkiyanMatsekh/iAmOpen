@@ -47,11 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\IUnitOfWork.cs" />
-    <Compile Include="Concrete\Database\DBGenericRepository.cs" />
+    <Compile Include="Concrete\Database\GenericDBRepository.cs" />
     <Compile Include="Abstractions\IGenericRepository.cs" />
     <Compile Include="Concrete\Database\DBUnitOfWork.cs" />
     <Compile Include="Concrete\Database\InstitutionContext.cs" />
     <Compile Include="Concrete\Mock\MockData.cs" />
+    <Compile Include="Concrete\Mock\GenericMockRepository.cs" />
     <Compile Include="Concrete\Mock\MockRepositories\ChainMockRepository.cs" />
     <Compile Include="Concrete\Mock\MockRepositories\InstitutionMockRepository.cs" />
     <Compile Include="Concrete\Mock\MockRepositories\StateMockRepository.cs" />
