@@ -8,3 +8,5 @@ bin/
 obj/
 *ReSharper*
 WebApp/Iamopen.suo
+WebApp/Iamopen.suo
+*.csproj.user
