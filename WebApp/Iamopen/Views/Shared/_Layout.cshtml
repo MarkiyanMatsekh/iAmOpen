@@ -1,15 +1,35 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>@ViewBag.Title</title>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jmvc/jquery-1.6.4.min.js")" type="text/javascript"></script>
-    <script src="@Url.Content("~/Scripts/jmvc/jquerymx-3.2.custom.min.js")" type="text/javascript"></script>
+   <meta charset="utf-8" />
+   <title>@ViewBag.Title</title>
+   <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
    @* <script src="@Url.Content("~/Scripts/modernizr-1.7.min.js")" type="text/javascript"></script>*@
 </head>
-
 <body>
-    @RenderBody()
+   <h1>
+      Last page reload time: @DateTime.Now.ToString()
+   </h1>
+   <div class="main-wrapper">
+      @RenderBody()
+   </div>
+   <script src="@Url.Content("~/Scripts/jmvc/jquery-1.6.4.min.js")" ></script>
+   <script src="@Url.Content("~/Scripts/jmvc/jquerymx-3.2.custom.min.js")" ></script>
+   <script>
+      window.iamopen = {
+         meta: {
+            mainWrapperClass: "main-wrapper",
+            useAjax: true,
+            links: {
+               createInstitution: '@Url.Action("Create", "Institution")',
+               deleteInstitution: '@Url.Action("Delete", "Institution")',
+               editInstitution: '@Url.Action("Edit", "Institution")',
+               showInstitutions: '@Url.Action("Index", "Institution")',
+               institutionDetails: '@Url.Action("Details", "Institution")'
+            }
+         }
+      }
+   </script>
+   <script src="@Url.Content("~/Scripts/iamopen.setup.js")"></script>
 </body>
 </html>
