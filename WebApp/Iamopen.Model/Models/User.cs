@@ -12,10 +12,8 @@ using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Models
 {
-    public class User : EquatableEntity
+    public class User : EntityWithID<int>
     {
-        public int UserID { get; set; }
-
         [Required(ErrorMessage = "User Nickname is required!")]
         [MaxLength(50, ErrorMessage = "User Nickname cannot be longer than 50 characters!")]
         public string Nickname { get; set; }
@@ -34,10 +32,5 @@ namespace IAmOpen.Model.Models
 
         public virtual ICollection<UserExternalAccountToken> UserExternalAccounts { get; set; }
 
-        public override object EntityID
-        {
-            get { return UserID; }
-            set { UserID = (int) value; }
-        }
     }
 }

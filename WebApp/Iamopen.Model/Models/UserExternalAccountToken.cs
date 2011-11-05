@@ -3,10 +3,8 @@ using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Models
 {
-    public class UserExternalAccountToken : EquatableEntity
+    public class UserExternalAccountToken : EntityWithID<int>
     {
-        public int UserExternalAccountTokenID { get; set; }
-
         [Display(Name = "User")]
         public int UserID { get; set; }
 
@@ -21,10 +19,5 @@ namespace IAmOpen.Model.Models
         // what the hell is this? :D
             public int SecurityToken { get; set; }
 
-        public override object EntityID
-        {
-            get { return UserExternalAccountTokenID; }
-            set { UserExternalAccountTokenID = (int) value; }
-        }
     }
 }

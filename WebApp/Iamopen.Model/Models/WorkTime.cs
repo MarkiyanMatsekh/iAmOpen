@@ -11,11 +11,8 @@ using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Models
 {
-    public class WorkTime : EquatableEntity
+    public class WorkTime : EntityWithID<int>
     {
-        [Key]
-        public int WorkTimeID { get; set; }
-
         [Required(ErrorMessage = "Institution is required!")]
         public int InstitutionID { get; set; }
 
@@ -34,11 +31,5 @@ namespace IAmOpen.Model.Models
         [Required(ErrorMessage = "Closing Time is required!")]
         [Display(Name = "Closing Time")]
         public TimeSpan ClosingTime { get; set; }
-
-        public override object EntityID
-        {
-            get { return WorkTimeID; }
-            set { WorkTimeID = (int) value; }
-        }
     }
 }

@@ -5,11 +5,12 @@ using IAmOpen.Model.Abstractions;
 using System.Linq.Expressions;
 using System.Data;
 using System.Data.Entity;
+using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Concrete.Database
 {
     public class GenericDBRepository
-        <TEntity> : IGenericRepository<TEntity> where TEntity : class
+        <TEntity> : IGenericRepository<TEntity> where TEntity : EntityBase
     {
         private readonly InstitutionContext context;
         private readonly DbSet<TEntity> dbSet;

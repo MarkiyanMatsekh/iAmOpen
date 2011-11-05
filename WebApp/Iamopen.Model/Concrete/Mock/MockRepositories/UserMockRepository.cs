@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using IAmOpen.Model.Concrete.Mock.MockRepositories.Generic;
 using IAmOpen.Model.Models;
-using System.Linq.Expressions;
 
 namespace IAmOpen.Model.Concrete.Mock.MockRepositories
 {
-    public class UserMockRepository : GenericMockRepository<User>
+    public class UserMockRepository : GenericMockRepositoryWithIntegerID<User>
     {
         protected override List<User> _collection { get { return MockData.Users; } }
     }

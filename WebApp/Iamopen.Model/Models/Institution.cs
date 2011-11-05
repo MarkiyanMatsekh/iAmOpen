@@ -5,10 +5,8 @@ using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Models
 {
-    public class Institution : EquatableEntity
+    public class Institution : EntityWithID<int>
     {
-        public int InstitutionID { get; set; }
-
         [Display(Name = "Icon")]
         public string IconPath { get; set; }
 
@@ -50,11 +48,5 @@ namespace IAmOpen.Model.Models
         public int? ChainID { get; set; }
 
         public virtual Chain Chain { get; set; }
-
-        public override object EntityID
-        {
-            get { return InstitutionID; }
-            set { InstitutionID = (int) value; }
-        }
     }
 }

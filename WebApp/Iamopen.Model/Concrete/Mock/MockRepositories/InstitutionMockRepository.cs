@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using IAmOpen.Model.Concrete.Mock.MockRepositories.Generic;
 using IAmOpen.Model.Models;
 
 namespace IAmOpen.Model.Concrete.Mock.MockRepositories
 {
-    public class InstitutionMockRepository : GenericMockRepository<Institution>
+    public class InstitutionMockRepository : GenericMockRepositoryWithIntegerID<Institution>
     {
         protected override List<Institution> _collection { get { return MockData.Institutions; } }
     }

@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Linq.Expressions;
+﻿using System.Collections.Generic;
+using IAmOpen.Model.Concrete.Mock.MockRepositories.Generic;
 using IAmOpen.Model.Models;
 
 namespace IAmOpen.Model.Concrete.Mock.MockRepositories
 {
-    public class ChainMockRepository : GenericMockRepository<Chain>
+    public class ChainMockRepository : GenericMockRepositoryWithIntegerID<Chain>
     {
         protected override List<Chain> _collection { get { return MockData.Chains; } }
-
-        protected override void UpdateEntityIDBeforeAddingToCollection(Chain entity) { }
-
     }
 }

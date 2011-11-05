@@ -3,10 +3,8 @@ using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Models
 {
-    public class Vote : EquatableEntity
+    public class Vote : EntityWithID<int>
     {
-        public int VoteID { get; set; }
-
         [Display(Name = "Institution")]
         public int? InstitutionID { get; set; }
 
@@ -26,11 +24,5 @@ namespace IAmOpen.Model.Models
         [Display(Name = "Rating")]
         //add range for rating here. Need to ddecide range
             public short Value { get; set; }
-
-        public override object EntityID
-        {
-            get { return VoteID; }
-            set { VoteID = (int) value; }
-        }
     }
 }

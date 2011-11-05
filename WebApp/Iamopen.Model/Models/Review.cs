@@ -4,10 +4,8 @@ using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Models
 {
-    public class Review : EquatableEntity
+    public class Review : EntityWithID<int>
     {
-        public int ReviewID { get; set; }
-
         [Required(ErrorMessage = "Review body is required!")]
         public string Text { get; set; }
 
@@ -28,11 +26,5 @@ namespace IAmOpen.Model.Models
         public int? ChainID { get; set; }
 
         public virtual Chain ReferredChain { get; set; }
-
-        public override object EntityID
-        {
-            get { return ReviewID; }
-            set { ReviewID = (int) value; }
-        }
     }
 }

@@ -14,7 +14,7 @@
     <fieldset>
         <legend>Institution</legend>
 
-        @Html.HiddenFor(model => model.InstitutionID)
+        @Html.HiddenFor(model => model.ID)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.IconPath)
@@ -65,11 +65,11 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.StateID, "State")
+            @Html.LabelFor(model => model.ID, "State")
         </div>
         <div class="editor-field">
-            @Html.DropDownList("StateID", String.Empty)
-            @Html.ValidationMessageFor(model => model.StateID)
+            @Html.DropDownList("ID", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID)
         </div>
 
         <div class="editor-label">

@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Abstractions
 {
-    public interface IGenericRepository<TEntity> where TEntity : class
+    public interface IGenericRepository<TEntity> where TEntity : EntityBase
     {
 
         IEnumerable<TEntity> Get(

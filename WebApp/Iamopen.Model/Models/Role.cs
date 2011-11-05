@@ -4,10 +4,8 @@ using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Models
 {
-    public class Role : EquatableEntity
+    public class Role : EntityWithID<int>
     {
-        public int RoleID { get; set; }
-
         [Required(ErrorMessage = "Role Name is required!")]
         [MaxLength(50, ErrorMessage = "Role Name cannot be longer than 50 characters!")]
         [Display(Name = "Role")]
@@ -15,10 +13,5 @@ namespace IAmOpen.Model.Models
 
         public virtual ICollection<User> Users { get; set; }
 
-        public override object EntityID
-        {
-            get { return RoleID; }
-            set { RoleID = (int) value; }
-        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using IAmOpen.Model.Abstractions;
 using IAmOpen.Model.Models;
+using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Concrete.Database
 {
@@ -106,7 +107,7 @@ namespace IAmOpen.Model.Concrete.Database
             GC.SuppressFinalize(this);
         }
 
-        private IGenericRepository<TEntity> CreateIfDoesntExist<TEntity>(ref GenericDBRepository<TEntity> field) where TEntity : class
+        private IGenericRepository<TEntity> CreateIfDoesntExist<TEntity>(ref GenericDBRepository<TEntity> field) where TEntity : EntityBase
         {
             return field ?? (field = new GenericDBRepository<TEntity>(context));
         }
