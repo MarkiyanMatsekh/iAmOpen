@@ -1,12 +1,9 @@
-﻿iamopen.Action('iamopen.GetAction', {
+﻿iamopen.Action.extend('iamopen.GetAction', {
+
    process: function (url) {
-      var self = this;
-      $.get(url).success(function () {
-            self.show.apply(self, arguments);
-         })
-         .error(function () {
-            self.onProcessFailed.apply(self, arguments);
-         });
+      $.get(url)
+         .success(this.proxy('show'))
+         .error(this.proxy('onProcessFailed'));
       return { cancel: true };
    }
 });

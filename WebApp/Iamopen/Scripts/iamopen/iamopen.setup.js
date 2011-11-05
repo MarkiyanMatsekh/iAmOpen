@@ -2,6 +2,8 @@
    var meta = window.iamopen.meta;
    var mainWrapper = $('.' + meta.mainWrapperClass);
 
+   // note MM: don't use _super() - it's EVIL! (try debugging with and without it's usage and look at it's state)
+   
    if (meta.useAjax) {
 
       window.iamopen.GetController('Initializer', {
@@ -15,14 +17,12 @@
                readParams: function () { return this.sender.attr("href"); },
                process: function (url) {
                   this.event.preventDefault();
-                  // todo MM: find a better way to call base class methods
-                  return this.constructor.prototype.process.call(this, url);
+                  return this.base.process.call(this, url);
                },
                show: function (data) { this.controller.element.html(data); }
             }
          }
       });
-
 
       mainWrapper.initializer();
 

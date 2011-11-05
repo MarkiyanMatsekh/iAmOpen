@@ -1,12 +1,12 @@
-﻿$.Class('iamopen.Action', {
+﻿$.Class.extend('iamopen.Action', {
    init: function (action, controller, sender, event) {
       $.extend(this, action);
       this.controller = controller;
       this.sender = sender;
       this.event = event;
+      this.base = this.constructor.prototype; // only shortcut
    },
    readParams: function () {
-      alert(1);
       return true;
    },
    process: function () {
@@ -17,7 +17,7 @@
    },
 
    onReadParamsFailed: function (e) { this.onFail(e); },
-   onProcessFailed: function (e) { debugger; this.onFail(e); },
+   onProcessFailed: function (e) { this.onFail(e); },
    onShowFailed: function (e) { this.onFail(e); },
    onFail: function (e) {
       if (typeof (e) === 'string') {

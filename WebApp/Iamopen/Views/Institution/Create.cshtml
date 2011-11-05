@@ -58,7 +58,7 @@
             @Html.LabelFor(model => model.StatusID, "Status")
         </div>
         <div class="editor-field">
-            @Html.DropDownList("StatusID")
+            @Html.DropDownList("StatusID",  String.Empty)
             @Html.ValidationMessageFor(model => model.StatusID)
         </div>
 
