@@ -7,17 +7,16 @@ using System.Linq.Expressions;
 
 namespace IAmOpen.Model.Concrete.Mock.MockRepositories
 {
-    // TODO: finish this mock repository
-    public class UserMockRepository : IAmOpen.Model.Abstractions.IGenericRepository<User>
+    class VoteMockRepository : IAmOpen.Model.Abstractions.IGenericRepository<Vote>
     {
-        private static List<User> _collection { get { return MockData.Users; } }
+        private static List<Vote> _collection { get { return MockData.Votes; } }
 
-        public virtual IEnumerable<User> Get(
-            Expression<Func<User, bool>> filter = null,
-            Func<IQueryable<User>, IOrderedQueryable<User>> orderBy = null,
+        public virtual IEnumerable<Vote> Get(
+            Expression<Func<Vote, bool>> filter = null,
+            Func<IQueryable<Vote>, IOrderedQueryable<Vote>> orderBy = null,
             string includeProperties = "")
         {
-            IQueryable<User> query = _collection.AsQueryable();
+            IQueryable<Vote> query = _collection.AsQueryable();
 
             if (filter != null)
             {
@@ -33,29 +32,29 @@ namespace IAmOpen.Model.Concrete.Mock.MockRepositories
             return orderBy != null ? orderBy(query).ToList() : query.ToList();
         }
 
-        public virtual User GetByID(object id)
+        public virtual Vote GetByID(object id)
         {
-            return _collection.Find(delegate(User u) { return u.UserID == Convert.ToInt32(id); });
+            return _collection.Find(delegate(Vote v) { return v.VoteID == Convert.ToInt32(id); });
         }
 
-        public virtual void Insert(User entity)
+        public virtual void Insert(Vote entity)
         {
             if (!_collection.Contains(entity))
             {
-                var lastID = _collection[_collection.Count - 1].UserID;
-                entity.UserID = ++lastID;
+                var lastID = _collection[_collection.Count - 1].VoteID;
+                entity.VoteID = ++lastID;
                 _collection.Add(entity);
             }
         }
 
         public virtual void Delete(object id)
         {
-            User user = GetByID(id);
-            if (_collection.Contains(user))
-                _collection.Remove(user);
+            Vote vote = GetByID(id);
+            if (_collection.Contains(vote))
+                _collection.Remove(vote);
         }
 
-        public virtual void Delete(User entityToDelete)
+        public virtual void Delete(Vote entityToDelete)
         {
             if (_collection.Contains(entityToDelete))
             {
@@ -63,9 +62,9 @@ namespace IAmOpen.Model.Concrete.Mock.MockRepositories
             }
         }
 
-        public virtual void Update(User entityToUpdate)
+        public virtual void Update(Vote entityToUpdate)
         {
-            int index = _collection.FindIndex(p => p.UserID == entityToUpdate.UserID);
+            int index = _collection.FindIndex(p => p.VoteID == entityToUpdate.VoteID);
             if (index >= 0)
                 _collection[index] = entityToUpdate;
         }

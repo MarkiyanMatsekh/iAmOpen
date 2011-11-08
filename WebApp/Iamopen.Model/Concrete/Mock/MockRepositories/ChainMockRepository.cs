@@ -8,6 +8,7 @@ namespace IAmOpen.Model.Concrete.Mock.MockRepositories
 {
     public class ChainMockRepository : IAmOpen.Model.Abstractions.IGenericRepository<IAmOpen.Model.Models.Chain>
     {
+        // TODO: finish this mock repository
         public virtual IEnumerable<IAmOpen.Model.Models.Chain> Get(
             Expression<Func<IAmOpen.Model.Models.Chain, bool>> filter = null,
             Func<IQueryable<IAmOpen.Model.Models.Chain>, IOrderedQueryable<IAmOpen.Model.Models.Chain>> orderBy = null,
@@ -43,7 +44,7 @@ namespace IAmOpen.Model.Concrete.Mock.MockRepositories
 
         public virtual void Insert(IAmOpen.Model.Models.Chain entity)
         {
-            if (!MockData.Chains.Contains(entity))
+            if (!MockData.Chains.Contains(entity)){}
                 MockData.Chains.Add(entity);
         }
 

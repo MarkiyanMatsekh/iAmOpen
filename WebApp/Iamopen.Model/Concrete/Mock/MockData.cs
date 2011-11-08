@@ -17,6 +17,10 @@ namespace IAmOpen.Model.Concrete.Mock
         static User user_1 = new User() { UserID = 1, Nickname = "Nick_1", FirstLoginDLC = DateTime.Now, PrivacyOn = true };
         static User user_2 = new User() { UserID = 2, Nickname = "Nick_2", FirstLoginDLC = DateTime.Now, PrivacyOn = true };
 
+        private static Chain chain_1 = new Chain() {ChainID = 1, Name = "Silpo"};
+        private static Chain chain_2 = new Chain() {ChainID = 2, Name = "Arsen"};
+        private static Chain chain_3 = new Chain() {ChainID = 3, Name = "Local"};
+
         static List<Institution> _institutions = new List<Institution>()
                            {
                                new Institution() { InstitutionID = 1, CoordinatesX = 1, CoordinatesY = 2, StateID = state_1.StateID, StatusID = statusOK.StatusID, UserID = user_1.UserID, IconPath = "somePath1", CreatedDLC = DateTime.Now, Rating = 5, Status = statusOK, State = state_1, CreatedByUser = user_1},
@@ -32,9 +36,9 @@ namespace IAmOpen.Model.Concrete.Mock
 
         static List<Chain> _chains = new List<Chain>()
                            {
-                               new Chain(){ ChainID = 1, Name = "Silpo"}, 
-                               new Chain(){ ChainID = 2, Name = "Arsen"}, 
-                               new Chain(){ ChainID = 3, Name = "Local"}
+                               chain_1,
+                               chain_2,
+                               chain_3
                            };
 
         static List<Status> _statuses = new List<Status>()
@@ -49,29 +53,23 @@ namespace IAmOpen.Model.Concrete.Mock
                                user_2
                            };
 
-        public static List<Institution> Institutions
-        {
-            get { return _institutions; }
-        }
+        static List<Vote> _votes = new List<Vote>()
+                           {
+                               new Vote(){ VoteID = 1, UserID = Users[0].UserID, Voter = Users[0], InstitutionID = Institutions[0].InstitutionID, Institution = Institutions[0]},
+                               new Vote(){ VoteID = 2, UserID = Users[1].UserID, Voter = Users[1], InstitutionID = Institutions[1].InstitutionID, Institution = Institutions[1]},
+                               new Vote(){ VoteID = 3, UserID = Users[0].UserID, Voter = Users[0], InstitutionID = Institutions[2].InstitutionID, Institution = Institutions[2]}
+                           };
 
-        public static List<Chain> Chains
-        {
-            get { return _chains; }
-        }
+        public static List<Institution> Institutions { get { return _institutions; } }
 
-        public static List<Status> Statuses
-        {
-            get { return _statuses; }
-        }
+        public static List<Chain> Chains { get { return _chains; } }
 
-        public static List<State> States
-        {
-            get { return _states; }
-        }
+        public static List<Status> Statuses { get { return _statuses; } }
 
-        public static List<User> Users
-        {
-            get { return _users; }
-        }
+        public static List<State> States { get { return _states; } }
+
+        public static List<User> Users { get { return _users; } }
+
+        public static List<Vote> Votes { get { return _votes; } }
     }
 }
