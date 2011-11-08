@@ -1,22 +1,24 @@
 ﻿#region
 
+
 using System;
 using System.ComponentModel.DataAnnotations;
+using IAmOpen.Model.Models.Base;
+
 
 #endregion
 
+
 namespace IAmOpen.Model.Models
 {
-    public class WorkTime
+    public class WorkTime : EntityWithID<int>
     {
-        [Key]
-        public int WorkTimeID { get; set; }
-
         [Required(ErrorMessage = "Institution is required!")]
         public int InstitutionID { get; set; }
+
         public virtual Institution Institution { get; set; }
 
-        [Range(0,6,ErrorMessage="Day should be in range from 0 to 6!")]
+        [Range(0, 6, ErrorMessage = "Day should be in range from 0 to 6!")]
         [Display(Name = "Day Of Week")]
         public int? DayOfWeekID { get; set; }
 

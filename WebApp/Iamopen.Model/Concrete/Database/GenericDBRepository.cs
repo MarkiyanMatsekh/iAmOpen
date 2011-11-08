@@ -5,16 +5,17 @@ using IAmOpen.Model.Abstractions;
 using System.Linq.Expressions;
 using System.Data;
 using System.Data.Entity;
+using IAmOpen.Model.Models.Base;
 
 namespace IAmOpen.Model.Concrete.Database
 {
-    public class DBGenericRepository
-        <TEntity> : IGenericRepository<TEntity> where TEntity : class
+    public class GenericDBRepository
+        <TEntity> : IGenericRepository<TEntity> where TEntity : EntityBase
     {
         private readonly InstitutionContext context;
         private readonly DbSet<TEntity> dbSet;
 
-        public DBGenericRepository(InstitutionContext context)
+        public GenericDBRepository(InstitutionContext context)
         {
             this.context = context;
             this.dbSet = context.Set<TEntity>();

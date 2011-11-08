@@ -47,12 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstractions\IUnitOfWork.cs" />
-    <Compile Include="Concrete\Database\DBGenericRepository.cs" />
+    <Compile Include="Concrete\Database\GenericDBRepository.cs" />
     <Compile Include="Abstractions\IGenericRepository.cs" />
     <Compile Include="Concrete\Database\DBUnitOfWork.cs" />
     <Compile Include="Concrete\Database\InstitutionContext.cs" />
     <Compile Include="Concrete\Mock\MockData.cs" />
+    <Compile Include="Concrete\Mock\MockRepositories\Generic\GenericMockRepository.cs" />
     <Compile Include="Concrete\Mock\MockRepositories\ChainMockRepository.cs" />
+    <Compile Include="Concrete\Mock\MockRepositories\Generic\GenericMockRepositoryWithIntegerID.cs" />
     <Compile Include="Concrete\Mock\MockRepositories\InstitutionMockRepository.cs" />
     <Compile Include="Concrete\Mock\MockRepositories\StateMockRepository.cs" />
     <Compile Include="Concrete\Mock\MockRepositories\StatusMockRepository.cs" />
@@ -62,7 +64,9 @@
     <Compile Include="Concrete\Mock\MockUnitOfWork.cs" />
     <Compile Include="Concrete\Mock\ReviewMockRepository.cs" />
     <Compile Include="Initialization\InstitutionInitializer.cs" />
+    <Compile Include="Models\Base\EntityBase.cs" />
     <Compile Include="Models\Chain.cs" />
+    <Compile Include="Models\Base\EntityWithID.cs" />
     <Compile Include="Models\ExternalAccount.cs" />
     <Compile Include="Models\Institution.cs" />
     <Compile Include="Models\InstitutionType.cs" />

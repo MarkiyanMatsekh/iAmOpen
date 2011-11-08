@@ -24,7 +24,19 @@
             CoordinatesY
         </th>
         <th>
+            UserID
+        </th>
+        <th>
+            Status
+        </th>
+        <th>
+            State
+        </th>
+        <th>
             Rating
+        </th>
+        <th>
+            Chain
         </th>
         <th></th>
     </tr>
@@ -44,12 +56,24 @@
             @Html.DisplayFor(modelItem => item.CoordinatesY)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State.Name)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Rating)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.InstitutionID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.InstitutionID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.InstitutionID })
+            @Html.DisplayFor(modelItem => item.Chain.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
 }

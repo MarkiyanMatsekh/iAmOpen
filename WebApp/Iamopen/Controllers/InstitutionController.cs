@@ -39,10 +39,10 @@ namespace Iamopen.Controllers
 
         public ActionResult Create()
         {
-            ViewBag.StatusID = new SelectList(unitOfWork.StatusRepository.Get(), "StatusID", "Name");
-            ViewBag.StateID = new SelectList(unitOfWork.StateRepository.Get(), "StateID", "Name");
-            ViewBag.ChainID = new SelectList(unitOfWork.ChainRepository.Get(), "ChainID", "Name");
-            ViewBag.UserID = new SelectList(unitOfWork.UserRepository.Get(), "UserID", "NickName");
+            ViewBag.StatusID = new SelectList(unitOfWork.StatusRepository.Get(), "ID", "Name");
+            ViewBag.StateID = new SelectList(unitOfWork.StateRepository.Get(), "ID", "Name");
+            ViewBag.ChainID = new SelectList(unitOfWork.ChainRepository.Get(), "ID", "Name");
+            ViewBag.UserID = new SelectList(unitOfWork.UserRepository.Get(), "ID", "NickName");
             return View();
         }
 
@@ -137,28 +137,28 @@ namespace Iamopen.Controllers
         {
             var statuses = unitOfWork.StatusRepository.Get(
                 orderBy: q => q.OrderBy(d => d.Name));
-            ViewBag.StatusID = new SelectList(statuses, "StatusID", "Name", selectedStatus);
+            ViewBag.StatusID = new SelectList(statuses, "ID", "Name", selectedStatus);
         }
 
         private void FillStates(object selectedState = null)
         {
             var states = unitOfWork.StateRepository.Get(
                 orderBy: q => q.OrderBy(d => d.Name));
-            ViewBag.StateID = new SelectList(states, "StateID", "Name", selectedState);
+            ViewBag.StateID = new SelectList(states, "ID", "Name", selectedState);
         }
 
         private void FillChains(object selectedChain = null)
         {
             var chains = unitOfWork.ChainRepository.Get(
                 orderBy: q => q.OrderBy(d => d.Name));
-            ViewBag.ChainID = new SelectList(chains, "ChainID", "Name", selectedChain);
+            ViewBag.ChainID = new SelectList(chains, "ID", "Name", selectedChain);
         }
 
         private void FillUsers(object selectedUser = null)
         {
             var users = unitOfWork.UserRepository.Get(
                 orderBy: q => q.OrderBy(d => d.Nickname));
-            ViewBag.ChainID = new SelectList(users, "UserID", "Nickname", selectedUser);
+            ViewBag.ChainID = new SelectList(users, "ID", "Nickname", selectedUser);
         }
     }
 }

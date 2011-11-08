@@ -27,7 +27,7 @@ namespace IAmOpen.Model.Concrete.Database
             modelBuilder.Entity<Institution>()
                 .HasMany(i => i.Types)
                 .WithMany(it => it.Institutions)
-                .Map(t => t.MapLeftKey("InstitutionID").MapRightKey("InstitutionTypeID").ToTable("InstitutionWithInstitutionTypes"));
+                .Map(t => t.MapLeftKey("ID").MapRightKey("InstitutionTypeID").ToTable("InstitutionWithInstitutionTypes"));
 
             modelBuilder.Entity<Institution>().HasMany(i => i.Reviews).WithRequired(r => r.ReferredInstitution);
             modelBuilder.Entity<Institution>().HasMany(i => i.WorkHours).WithRequired(wh => wh.Institution);
@@ -51,7 +51,7 @@ namespace IAmOpen.Model.Concrete.Database
             modelBuilder.Entity<User>()
                 .HasMany(u => u.MyInstitutions)
                 .WithMany(i => i.Visiters)
-                .Map(t => t.MapLeftKey("UserID").MapRightKey("InstitutionID").ToTable("UserPlaces"));
+                .Map(t => t.MapLeftKey("UserID").MapRightKey("ID").ToTable("UserPlaces"));
             
             modelBuilder.Entity<User>().HasMany(u => u.UserExternalAccounts).WithRequired(uea => uea.User);
 

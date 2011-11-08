@@ -13,8 +13,8 @@ namespace IAmOpen.Model.Initialization
         {
             var extAccounts = new List<ExternalAccount>
                                   {
-                                      new ExternalAccount() {Name="Facebook", ExternalAccountID=1},
-                                      new ExternalAccount() {Name="Vkontakte", ExternalAccountID=2}
+                                      new ExternalAccount() {Name="Facebook", ID=1},
+                                      new ExternalAccount() {Name="Vkontakte", ID=2}
                                   };
             extAccounts.ForEach(s => context.ExternalAccounts.Add(s));
             context.SaveChanges();
@@ -47,8 +47,8 @@ namespace IAmOpen.Model.Initialization
 
             var institutions = new List<Institution>
                                    {
-                                       new Institution { CreatedDLC = DateTime.Now, CoordinatesX = 5.5, CoordinatesY = 7.9, UserID = 1, IconPath = "somePath", StatusID=1, StateID=1},
-                                       new Institution { CreatedDLC = DateTime.Now, CoordinatesX = 5.9, CoordinatesY = 7.3, UserID = 2, IconPath = "somePath", StatusID=2, StateID=2}
+                                       new Institution { CreatedDLC = DateTime.Now, CoordinatesX = 5.5, CoordinatesY = 7.9, UserID = 1, IconPath = "somePath", StatusID=1, ID=1},
+                                       new Institution { CreatedDLC = DateTime.Now, CoordinatesX = 5.9, CoordinatesY = 7.3, UserID = 2, IconPath = "somePath", StatusID=2, ID=2}
                                    };
 
             institutions.ForEach(s => context.Institutions.Add(s));
@@ -73,10 +73,10 @@ namespace IAmOpen.Model.Initialization
 
             var reviews = new List<Review>
                               {
-                                  new Review { UserID = 1,DateOfReport = DateTime.Now, InstitutionID = 1,Text = "blabla"},
-                                  new Review { UserID = 1,DateOfReport = DateTime.Now, InstitutionID = 2,Text = "blabla"},
-                                  new Review { UserID = 2,DateOfReport = DateTime.Now, InstitutionID = 1,Text = "blabla"},
-                                  new Review { UserID = 2,DateOfReport = DateTime.Now, InstitutionID = 2,Text = "blabla"}
+                                  new Review { UserID = 1,DateOfReport = DateTime.Now, ID = 1,Text = "blabla"},
+                                  new Review { UserID = 1,DateOfReport = DateTime.Now, ID = 2,Text = "blabla"},
+                                  new Review { UserID = 2,DateOfReport = DateTime.Now, ID = 1,Text = "blabla"},
+                                  new Review { UserID = 2,DateOfReport = DateTime.Now, ID = 2,Text = "blabla"}
                               };
 
             reviews.ForEach(r => context.Reviews.Add(r));
