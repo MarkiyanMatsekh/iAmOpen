@@ -4,7 +4,8 @@
 
       invokeAction: function (_action, sender, event) {
 
-         var action = new window.iamopen.GetAction(_action, this, sender, event);
+         // todo MM: investigate why this._actionProto != window.iamopen.Action in here
+         var action = new (this._getActionProto())(_action, this, sender, event);
 
          safeInvoke.call(action, action.readParams, [], action.onReadParamsFailed, function (params) {
             safeInvoke.call(action, action.process, params, action.onProcessFailed, function (data) {
@@ -13,7 +14,8 @@
          });
       },
 
-      _actionProto: window.iamopen.Action
+      //_actionProto:   window.iamopen.Action,
+      _getActionProto: function () { return window.iamopen.Action; }
 
    });
 
