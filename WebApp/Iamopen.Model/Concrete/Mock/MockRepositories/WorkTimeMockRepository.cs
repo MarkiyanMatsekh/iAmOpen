@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using IAmOpen.Model.Concrete.Mock.Generic;
+using IAmOpen.Model.Models;
 
 namespace IAmOpen.Model.Concrete.Mock.MockRepositories
 {
-    class WorkTimeMockRepository
+    public class WorkTimeMockRepository : GenericMockRepositoryWithIntegerID<WorkTime>
     {
-        // TODO: finish this mock repository
+        protected override List<WorkTime> _collection { get { return MockData.WorkTimes; } }
     }
 }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using IAmOpen.Model.Models;
@@ -49,6 +50,68 @@ namespace IAmOpen.Model.Concrete.Mock
             user_2
         };
 
+        static readonly List<Review> _reviews = new List<Review>()
+                                                    {
+                                                        new Review(){ID = 1, UserID = user_1.ID, Author = user_1, Text = "Review#1", InstitutionID = _institutions[0].ID, ReferredInstitution = _institutions[0], DateOfReport = DateTime.Now},
+                                                        new Review(){ID = 2, UserID = user_2.ID, Author = user_2, Text = "Review#2", InstitutionID = _institutions[1].ID, ReferredInstitution = _institutions[1], DateOfReport = DateTime.Now},
+                                                        new Review(){ID = 3, UserID = user_1.ID, Author = user_1, Text = "Review#3", InstitutionID = _institutions[2].ID, ReferredInstitution = _institutions[2], DateOfReport = DateTime.Now}
+                                                    };  
+
+        static readonly List<WorkTime> _workTimes = new List<WorkTime>()
+                                                        {
+                                                            new WorkTime(){ ID = 1, Date = new DateTime(2011,11,04), InstitutionID = _institutions[0].ID, Institution = _institutions[0], DayOfWeek = 1, OpeningTime = new TimeSpan(9,0,0), ClosingTime = new TimeSpan(18,0,0)},
+                                                            new WorkTime(){ ID = 2, Date = new DateTime(2011,11,05), InstitutionID = _institutions[1].ID, Institution = _institutions[1], DayOfWeek = 2, OpeningTime = new TimeSpan(10,0,0), ClosingTime = new TimeSpan(17,0,0)},
+                                                            new WorkTime(){ ID = 3, Date = new DateTime(2011,11,06), InstitutionID = _institutions[2].ID, Institution = _institutions[2], DayOfWeek = 3, OpeningTime = new TimeSpan(11,0,0), ClosingTime = new TimeSpan(15,0,0)}
+                                                        }; 
+
+        static readonly List<Role> _roles = new List<Role>()
+                                                {
+                                                    new Role(){ ID = 1, Name = "Administrator", Users = new Collection<User>()
+                                                                                                            {
+                                                                                                                user_1,
+                                                                                                                user_2
+                                                                                                            }},
+                                                    new Role(){ID = 2, Name = "Guest", Users = null}
+                                                }; 
+
+        static readonly List<InstitutionType> _institutionTypes = new List<InstitutionType>()
+                                                                      {
+                                                                          new InstitutionType(){ID = 1, Name = "Cafe", IconPath = "IconPath1", Institutions = new Collection<Institution>()
+                                                                                                                                                                  {
+                                                                                                                                                                      _institutions[0],
+                                                                                                                                                                      _institutions[2]
+                                                                                                                                                                  }},
+                                                                          new InstitutionType(){ID = 2, Name = "Pub", IconPath = "IconPath2", Institutions = new Collection<Institution>()
+                                                                                                                                                                 {
+                                                                                                                                                                     _institutions[1]
+                                                                                                                                                                 }}
+                                                                      }; 
+
+        static readonly List<Vote> _votes = new List<Vote>()
+                                                {
+                                                    new Vote(){ID = 1, InstitutionID = _institutions[0].ID, Institution = _institutions[0], UserID = user_1.ID, Voter = user_1, Value = 3},
+                                                    new Vote(){ID = 2, InstitutionID = _institutions[1].ID, Institution = _institutions[1], UserID = user_2.ID, Voter = user_2, Value = 4},
+                                                    new Vote(){ID = 3, InstitutionID = _institutions[2].ID, Institution = _institutions[2], UserID = user_1.ID, Voter = user_1, Value = 5}
+                                                }; 
+
+        static readonly List<UserExternalAccountToken> _userExternalAccountTokens = new List<UserExternalAccountToken>()
+                                                                                        {
+                                                                                            new UserExternalAccountToken(){ID = 1, UserID = user_1.ID, User = user_1, ExternalAccountID = _externalAccounts[0].ID, Account = _externalAccounts[0], SecurityToken = 111111},
+                                                                                            new UserExternalAccountToken(){ID = 2, UserID = user_2.ID, User = user_2, ExternalAccountID = _externalAccounts[1].ID, Account = _externalAccounts[1], SecurityToken = 222222}
+                                                                                        }; 
+
+        static readonly List<ExternalAccount> _externalAccounts = new List<ExternalAccount>()
+                                                                     {
+                                                                         new ExternalAccount(){ID = 1, Name = "ExternalAcc1", UserExternalAccounts = new Collection<UserExternalAccountToken>()
+                                                                                                                                                         {
+                                                                                                                                                             _userExternalAccountTokens[0]
+                                                                                                                                                         }},
+                                                                         new ExternalAccount(){ID = 2, Name = "ExternalAcc2", UserExternalAccounts = new Collection<UserExternalAccountToken>()
+                                                                                                                                                         {
+                                                                                                                                                             _userExternalAccountTokens[1]
+                                                                                                                                                         }}
+                                                                     };
+
         public static List<Institution> Institutions { get { return _institutions; } }
 
         public static List<Chain> Chains { get { return _chains; } }
@@ -59,5 +122,18 @@ namespace IAmOpen.Model.Concrete.Mock
 
         public static List<User> Users { get { return _users; } }
 
+        public static List<Review> Reviews { get { return _reviews; } }
+
+        public static List<WorkTime> WorkTimes { get { return _workTimes; } }
+
+        public static List<Role> Roles { get { return _roles; } }
+
+        public static List<InstitutionType> InstitutionTypes { get { return _institutionTypes; } }
+
+        public static List<Vote> Votes { get { return _votes; } }
+
+        public static List<UserExternalAccountToken> UserExternalAccountTokens { get { return _userExternalAccountTokens; } }
+
+        public static List<ExternalAccount> ExternalAccounts { get { return _externalAccounts; } }
     }
 }

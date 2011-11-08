@@ -20,7 +20,7 @@ namespace IAmOpen.Model.Models
 
         [Range(0, 6, ErrorMessage = "Day should be in range from 0 to 6!")]
         [Display(Name = "Day Of Week")]
-        public int? DayOfWeekID { get; set; }
+        public int DayOfWeek { get; set; }
 
         public DateTime? Date { get; set; }
 

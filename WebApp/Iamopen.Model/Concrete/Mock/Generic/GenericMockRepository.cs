@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using IAmOpen.Model.Abstractions;
 using IAmOpen.Model.Models.Base;
 
-namespace IAmOpen.Model.Concrete.Mock.MockRepositories.Generic
+namespace IAmOpen.Model.Concrete.Mock.Generic
 {
     public abstract class GenericMockRepository<TEntity,TID> : IGenericRepository<TEntity> 
         where TEntity : EntityWithID<TID> 

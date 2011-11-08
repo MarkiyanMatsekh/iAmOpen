@@ -4,8 +4,8 @@ using IAmOpen.Model.Models;
 
 namespace IAmOpen.Model.Concrete.Mock.MockRepositories
 {
-    public class VoteMockRepository : GenericMockRepositoryWithIntegerID<Vote>
+    public class RoleMockRepository : GenericMockRepositoryWithIntegerID<Role>
     {
-        protected override List<Vote> _collection { get { return MockData.Votes; } }
+        protected override List<Role> _collection { get { return MockData.Roles; } }
     }
 }
