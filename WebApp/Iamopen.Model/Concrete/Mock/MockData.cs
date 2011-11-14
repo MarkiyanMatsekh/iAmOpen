@@ -18,6 +18,48 @@ namespace IAmOpen.Model.Concrete.Mock
         static readonly User user_1 = new User() { ID = 1, Nickname = "Nick_1", FirstLoginDLC = DateTime.Now, PrivacyOn = true };
         static readonly User user_2 = new User() { ID = 2, Nickname = "Nick_2", FirstLoginDLC = DateTime.Now, PrivacyOn = true };
 
+        static readonly ExternalAccount ext_acc_1 = new ExternalAccount()
+                                                                {
+                                                                    ID = 1,
+                                                                    Name = "ExternalAcc1",
+                                                                    UserExternalAccounts =
+                                                                        new Collection<UserExternalAccountToken>()
+                                                                            {
+                                                                                usr_ext_acc_token_1
+                                                                            }
+                                                                };
+
+        static readonly ExternalAccount ext_acc_2 = new ExternalAccount()
+                                                                {
+                                                                    ID = 2,
+                                                                    Name = "ExternalAcc2",
+                                                                    UserExternalAccounts =
+                                                                        new Collection<UserExternalAccountToken>()
+                                                                            {
+                                                                                usr_ext_acc_token_2
+                                                                            }
+                                                                };
+
+        private static readonly UserExternalAccountToken usr_ext_acc_token_1 = new UserExternalAccountToken()
+                                                                                   {
+                                                                                       ID = 1,
+                                                                                       UserID = user_1.ID,
+                                                                                       User = user_1,
+                                                                                       ExternalAccountID = ext_acc_1.ID,
+                                                                                       Account = ext_acc_1,
+                                                                                       SecurityToken = 111111
+                                                                                   };
+
+        private static readonly UserExternalAccountToken usr_ext_acc_token_2 = new UserExternalAccountToken()
+                                                                                   {
+                                                                                       ID = 2,
+                                                                                       UserID = user_2.ID,
+                                                                                       User = user_2,
+                                                                                       ExternalAccountID = ext_acc_2.ID,
+                                                                                       Account = ext_acc_2,
+                                                                                       SecurityToken = 222222
+                                                                                   };
+
         static readonly List<Institution> _institutions = new List<Institution>()
         {
             new Institution() { ID = 1, CoordinatesX = 1, CoordinatesY = 2, StateID = state_1.ID, StatusID = statusOK.ID, UserID = user_1.ID, IconPath = "somePath1", CreatedDLC = DateTime.Now, Rating = 5, Status = statusOK, State = state_1, CreatedByUser = user_1},
@@ -96,20 +138,14 @@ namespace IAmOpen.Model.Concrete.Mock
 
         static readonly List<UserExternalAccountToken> _userExternalAccountTokens = new List<UserExternalAccountToken>()
                                                                                         {
-                                                                                            new UserExternalAccountToken(){ID = 1, UserID = user_1.ID, User = user_1, ExternalAccountID = _externalAccounts[0].ID, Account = _externalAccounts[0], SecurityToken = 111111},
-                                                                                            new UserExternalAccountToken(){ID = 2, UserID = user_2.ID, User = user_2, ExternalAccountID = _externalAccounts[1].ID, Account = _externalAccounts[1], SecurityToken = 222222}
-                                                                                        }; 
+                                                                                            usr_ext_acc_token_1,
+                                                                                            usr_ext_acc_token_2
+                                                                                        };
 
         static readonly List<ExternalAccount> _externalAccounts = new List<ExternalAccount>()
                                                                      {
-                                                                         new ExternalAccount(){ID = 1, Name = "ExternalAcc1", UserExternalAccounts = new Collection<UserExternalAccountToken>()
-                                                                                                                                                         {
-                                                                                                                                                             _userExternalAccountTokens[0]
-                                                                                                                                                         }},
-                                                                         new ExternalAccount(){ID = 2, Name = "ExternalAcc2", UserExternalAccounts = new Collection<UserExternalAccountToken>()
-                                                                                                                                                         {
-                                                                                                                                                             _userExternalAccountTokens[1]
-                                                                                                                                                         }}
+                                                                         ext_acc_1,
+                                                                         ext_acc_2
                                                                      };
 
         public static List<Institution> Institutions { get { return _institutions; } }
