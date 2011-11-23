@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using IAmOpen.Model.Models;
+using IAmOpen.Site.Model.Models;
 
-namespace IAmOpen.Model.Concrete.Mock
+namespace IAmOpen.Site.Model.Concrete.Mock
 {
     public class MockData
     {

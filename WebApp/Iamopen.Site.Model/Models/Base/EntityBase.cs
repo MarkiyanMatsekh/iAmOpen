@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace IAmOpen.Model.Models.Base
+﻿namespace IAmOpen.Site.Model.Models.Base
 {
     public abstract class EntityBase
     {

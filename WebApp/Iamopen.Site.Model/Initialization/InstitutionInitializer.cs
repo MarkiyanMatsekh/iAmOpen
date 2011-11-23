@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using IAmOpen.Model.Concrete;
-using IAmOpen.Model.Concrete.Database;
-using IAmOpen.Model.Models;
+using IAmOpen.Site.Model.Concrete.Database;
+using IAmOpen.Site.Model.Models;
 
-namespace IAmOpen.Model.Initialization
+namespace IAmOpen.Site.Model.Initialization
 {
     public class InstitutionInitializer : DropCreateDatabaseIfModelChanges<InstitutionContext>
     {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using IAmOpen.Model.Models.Base;
+using IAmOpen.Site.Model.Models.Base;
 
-namespace IAmOpen.Model.Models
+namespace IAmOpen.Site.Model.Models
 {
     public class InstitutionType : EntityWithID<int>
     {

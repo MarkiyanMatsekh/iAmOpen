@@ -1,9 +1,9 @@
 ﻿using System;
-using IAmOpen.Model.Abstractions;
-using IAmOpen.Model.Models;
-using IAmOpen.Model.Models.Base;
+using IAmOpen.Site.Model.Abstractions;
+using IAmOpen.Site.Model.Models;
+using IAmOpen.Site.Model.Models.Base;
 
-namespace IAmOpen.Model.Concrete.Database
+namespace IAmOpen.Site.Model.Concrete.Database
 {
     public class DBUnitOfWork : IUnitOfWork
     {

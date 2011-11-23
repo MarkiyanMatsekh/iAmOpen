@@ -1,11 +1,11 @@
 #region
 
 using System.Data.Entity;
-using IAmOpen.Model.Models;
+using IAmOpen.Site.Model.Models;
 
 #endregion
 
-namespace IAmOpen.Model.Concrete.Database
+namespace IAmOpen.Site.Model.Concrete.Database
 {
     public class InstitutionContext : DbContext
     {

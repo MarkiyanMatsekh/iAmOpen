@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using IAmOpen.Model.Models;
+using IAmOpen.Site.Model.Models;
 
-namespace IAmOpen.Model.Abstractions
+namespace IAmOpen.Site.Model.Abstractions
 {
     public interface IUnitOfWork: IDisposable
     {

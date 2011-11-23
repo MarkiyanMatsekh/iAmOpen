@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using IAmOpen.Model.Abstractions;
 using System.Linq.Expressions;
 using System.Data;
 using System.Data.Entity;
-using IAmOpen.Model.Models.Base;
+using IAmOpen.Site.Model.Abstractions;
+using IAmOpen.Site.Model.Models.Base;
 
-namespace IAmOpen.Model.Concrete.Database
+namespace IAmOpen.Site.Model.Concrete.Database
 {
     public class GenericDBRepository
         <TEntity> : IGenericRepository<TEntity> where TEntity : EntityBase

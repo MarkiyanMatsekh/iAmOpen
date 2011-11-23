@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using IAmOpen.Model.Abstractions;
-using IAmOpen.Model.Concrete.Mock.MockRepositories;
-using IAmOpen.Model.Models;
+using IAmOpen.Site.Model.Abstractions;
+using IAmOpen.Site.Model.Concrete.Mock.MockRepositories;
+using IAmOpen.Site.Model.Models;
 
-namespace IAmOpen.Model.Concrete.Mock
+namespace IAmOpen.Site.Model.Concrete.Mock
 {
     public class MockUnitOfWork  : IUnitOfWork
     {

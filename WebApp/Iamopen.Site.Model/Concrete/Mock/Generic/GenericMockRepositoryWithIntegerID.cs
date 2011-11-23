@@ -1,6 +1,6 @@
-﻿using IAmOpen.Model.Models.Base;
+﻿using IAmOpen.Site.Model.Models.Base;
 
-namespace IAmOpen.Model.Concrete.Mock.Generic
+namespace IAmOpen.Site.Model.Concrete.Mock.Generic
 {
     // todo MM: try to find some better name...
     public abstract class GenericMockRepositoryWithIntegerID<TEntity> : GenericMockRepository<TEntity, int> 

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
-using IAmOpen.Model.Abstractions;
 using System.Data;
+using IAmOpen.Site.Model.Abstractions;
+using IAmOpen.Site.Model.Models;
 
-namespace Iamopen.Controllers
+namespace Iamopen.Site.Controllers
 {
     public class InstitutionController : Controller
     {
@@ -30,7 +28,7 @@ namespace Iamopen.Controllers
 
         public ViewResult Details(int id)
         {
-            IAmOpen.Model.Models.Institution institution = unitOfWork.InstitutionRepository.GetByID(id);
+            Institution institution = unitOfWork.InstitutionRepository.GetByID(id);
             return View(institution);
         }
 
@@ -50,7 +48,7 @@ namespace Iamopen.Controllers
         // POST: /Institution/Create
 
         [HttpPost]
-        public ActionResult Create(IAmOpen.Model.Models.Institution institution)
+        public ActionResult Create(Institution institution)
         {
             try
             {
@@ -77,7 +75,7 @@ namespace Iamopen.Controllers
 
         public ActionResult Edit(int id)
         {
-            IAmOpen.Model.Models.Institution institution = unitOfWork.InstitutionRepository.GetByID(id);
+            Institution institution = unitOfWork.InstitutionRepository.GetByID(id);
             FillStatuses(institution.StatusID);
             FillStates(institution.StateID);
             FillChains(institution.ChainID);
@@ -89,7 +87,7 @@ namespace Iamopen.Controllers
         // POST: /Institution/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(IAmOpen.Model.Models.Institution institution)
+        public ActionResult Edit(Institution institution)
         {
             try
             {
@@ -116,7 +114,7 @@ namespace Iamopen.Controllers
 
         public ActionResult Delete(int id)
         {
-            IAmOpen.Model.Models.Institution institution = unitOfWork.InstitutionRepository.GetByID(id);
+            Institution institution = unitOfWork.InstitutionRepository.GetByID(id);
             return View(institution);
         }
 
@@ -126,7 +124,7 @@ namespace Iamopen.Controllers
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            IAmOpen.Model.Models.Institution institution = unitOfWork.InstitutionRepository.GetByID(id);
+            Institution institution = unitOfWork.InstitutionRepository.GetByID(id);
             unitOfWork.InstitutionRepository.Delete(institution);
             //unitOfWork.Save();
             return RedirectToAction("Index");

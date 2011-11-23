@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using IAmOpen.Model.Abstractions;
-using IAmOpen.Model.Models.Base;
+using IAmOpen.Site.Model.Abstractions;
+using IAmOpen.Site.Model.Models.Base;
 
-namespace IAmOpen.Model.Concrete.Mock.Generic
+namespace IAmOpen.Site.Model.Concrete.Mock.Generic
 {
     public abstract class GenericMockRepository<TEntity,TID> : IGenericRepository<TEntity> 
         where TEntity : EntityWithID<TID> 
