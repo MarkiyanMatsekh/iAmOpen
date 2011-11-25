@@ -5,6 +5,7 @@ using IAmOpen.Site.Model.Models.Base;
 
 namespace IAmOpen.Site.Model.Concrete.Database
 {
+    // TODO LP(from MM): consider why this class is not Disposable, but has Dispose method
     public class DBUnitOfWork : IUnitOfWork
     {
         private readonly InstitutionContext context = new InstitutionContext();

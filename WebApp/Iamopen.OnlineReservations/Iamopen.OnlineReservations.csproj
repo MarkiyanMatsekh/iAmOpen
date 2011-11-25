@@ -31,12 +31,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\DB\Models\Institution.cs" />
+    <Compile Include="Implementation\DB\Models\Hall.cs" />
+    <Compile Include="Implementation\DB\Models\Table.cs" />
+    <Compile Include="Implementation\DB\Models\Enumerations.cs" />
+    <Compile Include="Implementation\DB\Models\Reservation.cs" />
+    <Compile Include="Implementation\DB\OnlineReservationsContext.cs" />
+    <Compile Include="Implementation\OnlineReservationManager.cs" />
     <Compile Include="Interface\Models\CancelReservationModel.cs" />
     <Compile Include="Interface\Models\InstitutionsStatisticsModel.cs" />
     <Compile Include="Interface\Models\InstitutionsQueryModel.cs" />
@@ -45,9 +56,7 @@
     <Compile Include="Interface\IReservationManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Implementation\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Iamopen.Common\Iamopen.Common.csproj">
       <Project>{EDEAB994-B358-452F-BFFD-59713D81F340}</Project>

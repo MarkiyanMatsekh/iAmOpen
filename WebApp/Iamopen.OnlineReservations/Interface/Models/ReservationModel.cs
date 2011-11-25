@@ -29,11 +29,11 @@ namespace Iamopen.OnlineReservations.Interface.Models
     public class ReservationResult : OperationResult
     {
         public int ReservationID;
-        public InstitutionOnlineReservationType InstitutionType;
+        public InstitutionResponseType InstitutionResponseType;
     }
 
     // if Instant - user will receive confirmation almost immediatly
-    public enum InstitutionOnlineReservationType
+    public enum InstitutionResponseType
     {
         Instant = 0, // i.e. has access point in internet, where we can post information about reservation
         Delayed = 1 // i.e. doesn't have any listener, so it needs to ping our service to check for updates
