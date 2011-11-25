@@ -55,11 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface\Models\ChangeTableStatusModel.cs" />
+    <Compile Include="Interface\Models\UpdateStatusModel.cs" />
     <Compile Include="Interface\Models\ReportReservationResultModel.cs" />
     <Compile Include="Interface\Models\RespondToReservationModel.cs" />
-    <Compile Include="Service.svc.cs">
-      <DependentUpon>Service.svc</DependentUpon>
-    </Compile>
     <Compile Include="Interface\IAvailabilitySyncService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

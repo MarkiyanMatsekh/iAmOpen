@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Iamopen.AvailabilitySyncService.Service1" CodeBehind="Service.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Iamopen.AvailabilitySyncService.Service1" %>

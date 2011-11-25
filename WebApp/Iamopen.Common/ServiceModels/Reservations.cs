@@ -6,6 +6,7 @@ using System.Text;
 
 namespace Iamopen.Common.ServiceModels
 {
+
     [DataContract]
     public enum TableStatus
     {

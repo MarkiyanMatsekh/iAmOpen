@@ -13,5 +13,7 @@ namespace Iamopen.AvailabilitySyncService.Interface
         OperationResult RespondToReservation(ReservationResponseInfo confirmReservationInfo);
         [OperationContract]
         OperationResult ReportReservationResult(ActualReservationResult reservationResult);
+        [OperationContract]
+        UpdateStatusResult UpdateStatus(UpdateStatusInfo tableStatusInfo);
     }
 }
