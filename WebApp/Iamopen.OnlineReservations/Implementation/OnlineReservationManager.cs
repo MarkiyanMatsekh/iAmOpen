@@ -48,25 +48,45 @@ namespace Iamopen.OnlineReservations.Implementation
 
         public InstitutionOnlineStatusRequestResult GetInstitutionOnlineStatus(InstitutionOnlineStatusRequestInfo info)
         {
-            var q = context.Halls
-                .Where(hall => hall.InstitutionID == info.InstitutionID)
-                .Select(hall => new HallInfo
-                {
-                    HallID = hall.ID,
-                    Name = hall.Name,
-                    Tables = context.Tables.Where(t => t.HallID == hall.ID)
-                                           .Select(t => new TableInfo
-                                           {
-                                               TableID = t.TableID,
-                                               //TableStatus = t.Status,
-                                               TableNo = t.No
-                                           })
-                }).ToList();
-            context.Dispose();
+            var ts = new Iamopen.OnlineReservations.Implementation.DomainModels.TableStatus() { ID = 1 };
+
+
+
+
+            List<HallInfo> halls;
+            try
+            {
+                halls = (from h in context.Halls
+                         where (h.InstitutionID == info.InstitutionID) && 
+                               (!info.HallID.HasValue || h.ID == info.HallID.Value)
+                         select new HallInfo
+                         {
+                             HallID = h.ID,
+                             Name = h.Name,
+                             Tables =
+                                 from t in context.Tables
+                                 where t.HallID == h.ID
+                                 select new TableInfo
+                                 {
+                                     TableID = t.TableID,
+                                     //TableStatus = EntitiesMapping.MapTableStatus(t.Status),
+                                     TableStatus = (TableStatus)t.StatusID,
+                                     //TableStatus = (TableStatus)t.Status,
+                                     TableNo = t.No
+                                 }
+                         }).ToList();
+            }
+            finally
+            {
+                //todo MM: make up a good connection strategy
+                context.Dispose();
+            }
+                
+            
             return new InstitutionOnlineStatusRequestResult()
             {
                 ExecutionResult = new ExecutionResult { ResultCode = ResultCode.OK },
-                Halls = q.AsEnumerable()
+                Halls = halls
             };
         }
 

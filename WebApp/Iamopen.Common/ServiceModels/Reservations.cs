@@ -11,10 +11,12 @@ namespace Iamopen.Common.ServiceModels
     public enum TableStatus
     {
         [EnumMember]
-        Free = 0,
+        Free = 1,
         [EnumMember]
-        Busy = 1,
+        Busy = 2,
         [EnumMember]
-        Reserved = 2
+        Reserved = 3
+
+
     }
 }

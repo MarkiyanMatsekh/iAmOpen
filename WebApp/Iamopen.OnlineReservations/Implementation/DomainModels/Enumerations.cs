@@ -6,7 +6,13 @@
         public/*internal*/ string Name { get; set; }
     }
 
-    public/*internal*/ class TableStatus : Enumeration { }
+    public/*internal*/ class TableStatus : Enumeration
+    {
+        public static explicit operator Iamopen.Common.ServiceModels.TableStatus(TableStatus status)
+        {
+            return EntitiesMapping.MapTableStatus(status);
+        }
+    }
 
     public/*internal*/ class ReservationStatus : Enumeration { }
 

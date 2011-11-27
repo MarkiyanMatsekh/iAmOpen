@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Iamopen.Common.ServiceModels;
+using Iamopen.OnlineReservations.Implementation;
 
 namespace Iamopen.OnlineReservations.Interface.Models
 {
@@ -40,6 +41,8 @@ namespace Iamopen.OnlineReservations.Interface.Models
         /// Valid only if (TableStatus == Reserved) and (Reservarion's PublicityType == Public)
         /// </summary>
         public int? ReservationHolder;
+
+
     }
 
     public enum InstitutionServiceType

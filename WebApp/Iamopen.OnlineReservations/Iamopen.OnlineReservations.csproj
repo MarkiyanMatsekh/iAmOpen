@@ -53,6 +53,7 @@
     <Compile Include="Implementation\DomainModels\Reservation.cs" />
     <Compile Include="Implementation\DB\OnlineReservationsContext.cs" />
     <Compile Include="Implementation\DB\InitialData.cs" />
+    <Compile Include="Implementation\EntitiesMapping.cs" />
     <Compile Include="Implementation\OnlineReservationManager.cs" />
     <Compile Include="Interface\Models\CancelReservationModel.cs" />
     <Compile Include="Interface\Models\InstitutionsStatisticsModel.cs" />
