@@ -46,8 +46,8 @@ namespace IAmOpen.Site.Model.Initialization
 
             var institutions = new List<Institution>
                                    {
-                                       new Institution { CreatedDLC = DateTime.Now, CoordinatesX = 5.5, CoordinatesY = 7.9, UserID = 1, IconPath = "somePath", StatusID=1, ID=1},
-                                       new Institution { CreatedDLC = DateTime.Now, CoordinatesX = 5.9, CoordinatesY = 7.3, UserID = 2, IconPath = "somePath", StatusID=2, ID=2}
+                                       new Institution { CreatedDLC = DateTime.Now, CoordinatesX = 5.5, CoordinatesY = 7.9, UserID = 1, IconPath = "somePath", StatusID=1, StateID=1, ID=1},
+                                       new Institution { CreatedDLC = DateTime.Now, CoordinatesX = 5.9, CoordinatesY = 7.3, UserID = 2, IconPath = "somePath", StatusID=2, StateID=1, ID=2}
                                    };
 
             institutions.ForEach(s => context.Institutions.Add(s));
@@ -70,24 +70,24 @@ namespace IAmOpen.Site.Model.Initialization
             chains.ForEach(s => context.Chains.Add(s));
             context.SaveChanges();
 
-            var reviews = new List<Review>
-                              {
-                                  new Review { UserID = 1,DateOfReport = DateTime.Now, ID = 1,Text = "blabla"},
-                                  new Review { UserID = 1,DateOfReport = DateTime.Now, ID = 2,Text = "blabla"},
-                                  new Review { UserID = 2,DateOfReport = DateTime.Now, ID = 1,Text = "blabla"},
-                                  new Review { UserID = 2,DateOfReport = DateTime.Now, ID = 2,Text = "blabla"}
-                              };
+            //var reviews = new List<Review>
+            //                  {
+            //                      new Review { UserID = 1,DateOfReport = DateTime.Now, ID = 1,Text = "blabla"},
+            //                      new Review { UserID = 1,DateOfReport = DateTime.Now, ID = 2,Text = "blabla"},
+            //                      new Review { UserID = 2,DateOfReport = DateTime.Now, ID = 1,Text = "blabla"},
+            //                      new Review { UserID = 2,DateOfReport = DateTime.Now, ID = 2,Text = "blabla"}
+            //                  };
 
-            reviews.ForEach(r => context.Reviews.Add(r));
-            context.SaveChanges();
+            //reviews.ForEach(r => context.Reviews.Add(r));
+            //context.SaveChanges();
 
-            var userAccounts = new List<UserExternalAccountToken>
-                             {
-                                 new UserExternalAccountToken { UserID=1,ExternalAccountID=1,SecurityToken=888},
-                                 new UserExternalAccountToken { UserID=1,ExternalAccountID=2,SecurityToken=999}
-                             };
-            userAccounts.ForEach(ua => context.ExternalAccountTokens.Add(ua));
-            context.SaveChanges();
+            //var userAccounts = new List<UserExternalAccountToken>
+            //                 {
+            //                     new UserExternalAccountToken { UserID=1,ExternalAccountID=1,SecurityToken=888},
+            //                     new UserExternalAccountToken { UserID=1,ExternalAccountID=2,SecurityToken=999}
+            //                 };
+            //userAccounts.ForEach(ua => context.ExternalAccountTokens.Add(ua));
+            //context.SaveChanges();
 
             base.Seed(context);
 

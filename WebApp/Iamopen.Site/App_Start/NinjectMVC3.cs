@@ -48,7 +48,7 @@ namespace Iamopen.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IAmOpen.Site.Model.Abstractions.IUnitOfWork>()
-                .To<IAmOpen.Site.Model.Concrete.Mock.MockUnitOfWork>();
+                .To<IAmOpen.Site.Model.Concrete.Database.DBUnitOfWork>();
         }        
     }
 }

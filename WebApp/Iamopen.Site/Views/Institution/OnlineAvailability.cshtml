@@ -1,0 +1,14 @@
+﻿@model Iamopen.OnlineReservations.Interface.Models.InstitutionOnlineStatusRequestResult
+@{
+   ViewBag.Title = "title";
+}
+<h2>
+   title</h2>
+@{
+   foreach (var hall in Model.Halls)
+   {
+   <div style="background-color: darkgrey">@Html.DisplayFor(modelItem => hall.HallID)</div>
+                  
+   <div style="background-color: lavender">@Html.DisplayFor(modelItem => hall.Name) </div>
+   }
+}

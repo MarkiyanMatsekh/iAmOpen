@@ -8,7 +8,7 @@ namespace Iamopen.OnlineReservations.Interface.Models
     {
         public int InstitutionID;
         public int? HallID;
-        public TimeSpan RecentActivityTimeSpan;
+        public TimeSpan? RecentActivityTimeSpan;
     }
 
     public class InstitutionOnlineStatusRequestResult : OperationResult

@@ -36,17 +36,23 @@
       <HintPath>..\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\DB\Models\Institution.cs" />
-    <Compile Include="Implementation\DB\Models\Hall.cs" />
-    <Compile Include="Implementation\DB\Models\Table.cs" />
-    <Compile Include="Implementation\DB\Models\Enumerations.cs" />
-    <Compile Include="Implementation\DB\Models\Reservation.cs" />
+    <Compile Include="Implementation\DB\OnlineReservationsInitializer.cs" />
+    <Compile Include="Implementation\DB\StoredProcedures\SpReserveTable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\DomainModels\Institution.cs" />
+    <Compile Include="Implementation\DomainModels\Hall.cs" />
+    <Compile Include="Implementation\DomainModels\Table.cs" />
+    <Compile Include="Implementation\DomainModels\Enumerations.cs" />
+    <Compile Include="Implementation\DomainModels\Reservation.cs" />
     <Compile Include="Implementation\DB\OnlineReservationsContext.cs" />
+    <Compile Include="Implementation\DB\InitialData.cs" />
     <Compile Include="Implementation\OnlineReservationManager.cs" />
     <Compile Include="Interface\Models\CancelReservationModel.cs" />
     <Compile Include="Interface\Models\InstitutionsStatisticsModel.cs" />

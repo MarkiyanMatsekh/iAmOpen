@@ -7,7 +7,7 @@ namespace Iamopen.OnlineReservations.Interface.Models
     {
         public int TableID;
         public DateTime ReservationTime;
-        public int InstitutionID;
+        //public int InstitutionID;  // this is accessed in db by TableID
         public UserInfo UserInfo;
         public ReservationPublicityType PublicityType;
     }

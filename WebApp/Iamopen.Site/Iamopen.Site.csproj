@@ -124,8 +124,18 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Content Include="Views\Institution\OnlineAvailability.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Iamopen.Common\Iamopen.Common.csproj">
+      <Project>{EDEAB994-B358-452F-BFFD-59713D81F340}</Project>
+      <Name>Iamopen.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iamopen.OnlineReservations\Iamopen.OnlineReservations.csproj">
+      <Project>{89ECD9CF-4387-43F5-A413-4B9517E7575C}</Project>
+      <Name>Iamopen.OnlineReservations</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Iamopen.Site.Model\Iamopen.Site.Model.csproj">
       <Project>{780B5144-BE79-4758-8599-02270E272482}</Project>
       <Name>Iamopen.Site.Model</Name>

@@ -3,12 +3,15 @@ using System.Web.Mvc;
 using System.Data;
 using IAmOpen.Site.Model.Abstractions;
 using IAmOpen.Site.Model.Models;
+using Iamopen.OnlineReservations.Implementation;
+using Iamopen.OnlineReservations.Interface;
+using Iamopen.OnlineReservations.Interface.Models;
 
 namespace Iamopen.Site.Controllers
 {
     public class InstitutionController : Controller
     {
-        private IUnitOfWork unitOfWork;
+        private readonly IUnitOfWork unitOfWork;
 
         //
         // GET: /Institution/
@@ -55,7 +58,7 @@ namespace Iamopen.Site.Controllers
                 if (ModelState.IsValid)
                 {
                     unitOfWork.InstitutionRepository.Insert(institution);
-                    //unitOfWork.Save();
+                    unitOfWork.Save();
                     return RedirectToAction("Index");
                 }
             }
@@ -128,6 +131,19 @@ namespace Iamopen.Site.Controllers
             unitOfWork.InstitutionRepository.Delete(institution);
             //unitOfWork.Save();
             return RedirectToAction("Index");
+        }
+
+
+        public ActionResult OnlineAvailability(int id)
+        {
+            IReservationManager reservationManager = new OnlineReservationManager();
+            var data = reservationManager.GetInstitutionOnlineStatus(
+                new InstitutionOnlineStatusRequestInfo
+                    {
+                        InstitutionID = id
+                    });
+
+            return View(data);
         }
 
 

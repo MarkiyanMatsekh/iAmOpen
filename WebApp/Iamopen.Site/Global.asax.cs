@@ -1,5 +1,9 @@
-﻿using System.Web.Mvc;
+﻿using System.Data.Entity;
+using System.Web.Mvc;
 using System.Web.Routing;
+using IAmOpen.Site.Model.Concrete.Database;
+using IAmOpen.Site.Model.Initialization;
+using Iamopen.OnlineReservations.Implementation;
 
 namespace Iamopen.Site
 {
@@ -25,6 +29,10 @@ namespace Iamopen.Site
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+
+            //Database.SetInitializer<InstitutionContext>(new InstitutionInitializer());
+            
+            OnlineReservationManager.Init();
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);

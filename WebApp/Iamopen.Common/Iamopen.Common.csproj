@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -41,9 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\StoredProcedures\SpResult\SpResultBase.cs" />
+    <Compile Include="DB\StoredProcedures\SpResult\SpSingleRecordResult.cs" />
+    <Compile Include="DB\StoredProcedures\SpResult\SpTupleResult.cs" />
+    <Compile Include="DB\StoredProcedures\StoredProcedure\StoredProcedureBase.cs" />
+    <Compile Include="DB\StoredProcedures\StoredProcedure\StoredProcWithSingleRecordResult.cs" />
+    <Compile Include="DB\StoredProcedures\StoredProcedure\StoredProcWithTupleResult.cs" />
+    <Compile Include="Exceptions\IAmOpenExceptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceModels\BaseModels.cs" />
     <Compile Include="ServiceModels\Reservations.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Exceptions\OnlineReservationExceptions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
