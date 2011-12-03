@@ -4,9 +4,9 @@ using System.Data.Entity;
 using System.Data.SqlClient;
 using Iamopen.Common.DB.StoredProcedures.StoredProcedure;
 using Iamopen.Common.Exceptions;
-using Iamopen.OnlineReservations.Implementation.DomainModels;
+using Iamopen.OnlineAvailability.Implementation.DomainModels;
 
-namespace Iamopen.OnlineReservations.Implementation.DB.StoredProcedures
+namespace Iamopen.OnlineAvailability.Implementation.DB.StoredProcedures
 {
     public/*internal*/ class SpReserveTable : StoredProcWithSingleRecordResult<SpReserveTableResult>
     {

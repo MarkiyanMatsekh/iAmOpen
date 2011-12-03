@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Iamopen.Common.ServiceModels;
-using Iamopen.OnlineReservations.Implementation;
 
-namespace Iamopen.OnlineReservations.Interface.Models
+namespace Iamopen.OnlineAvailability.Interface.Models
 {
     public class InstitutionOnlineStatusRequestInfo
     {

@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using Iamopen.Common.DB.StoredProcedures.SpResult;
-using Iamopen.OnlineReservations.Implementation.DB.StoredProcedures;
-using Iamopen.OnlineReservations.Implementation.DomainModels;
+﻿using System.Data.Entity;
 
-namespace Iamopen.OnlineReservations.Implementation.DB
+namespace Iamopen.OnlineAvailability.Implementation.DB
 {
     // todo MM: change strategy to DropCreateDatabaseIfModelChanged
-    public/*internal*/ class OnlineReservationsInitializer : DropCreateDatabaseIfModelChanges<OnlineReservationsContext>
+    public/*internal*/ class OnlineAvailabilityInitializer : DropCreateDatabaseIfModelChanges<OnlineAvailabilityContext>
     {
 
-        protected override void Seed(OnlineReservationsContext context)
+        protected override void Seed(OnlineAvailabilityContext context)
         {
             InitialData.ResponseTypes.ForEach(rt => context.ResponseTypes.Add(rt));
             InitialData.InstitutionServiceTypes.ForEach(st => context.ServiceTypes.Add(st));

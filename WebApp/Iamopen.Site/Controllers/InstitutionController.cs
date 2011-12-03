@@ -4,9 +4,8 @@ using System.Web.Mvc;
 using System.Data;
 using IAmOpen.Site.Model.Abstractions;
 using IAmOpen.Site.Model.Models;
-using Iamopen.OnlineReservations.Implementation;
-using Iamopen.OnlineReservations.Interface;
-using Iamopen.OnlineReservations.Interface.Models;
+using Iamopen.OnlineAvailability.Implementation;
+using Iamopen.OnlineAvailability.Interface.Models;
 
 namespace Iamopen.Site.Controllers
 {
@@ -138,14 +137,14 @@ namespace Iamopen.Site.Controllers
         public ActionResult OnlineAvailability(int id)
         {
             InstitutionOnlineStatusRequestResult data;
-            using (var reservationManager = new OnlineReservationManager())
+            using (var reservationManager = new OnlineAvailabilityManager())
             {
-                var d = reservationManager.ReserveTable(new ReservationInfo()
-                                                            {
-                                                                TableID = 5,
-                                                                UserInfo = new UserInfo() { UserSID = 1 },
-                                                                ReservationTime = DateTime.Now
-                                                            });
+                //var d = reservationManager.ReserveTable(new ReservationInfo()
+                //                                            {
+                //                                                TableID = 5,
+                //                                                UserInfo = new UserInfo() { UserSID = 1 },
+                //                                                ReservationTime = DateTime.Now
+                //                                            });
                 data = reservationManager.GetInstitutionOnlineStatus(
                        new InstitutionOnlineStatusRequestInfo
                        {

@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 
-namespace Iamopen.OnlineReservations.Implementation.DomainModels
+namespace Iamopen.OnlineAvailability.Implementation.DomainModels
 {
     public/*internal*/ class Hall
     {

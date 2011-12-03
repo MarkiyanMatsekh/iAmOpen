@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using Iamopen.Common.Exceptions;
 using Iamopen.Common.ServiceModels;
-using Iamopen.OnlineReservations.Implementation;
 using NUnit.Framework;
 
 namespace Iamopen.Site.Tests.OnlineReservationsTests
@@ -15,10 +14,10 @@ namespace Iamopen.Site.Tests.OnlineReservationsTests
             // Arrange
             var tableStatuses = new[] 
             {
-                 new Iamopen.OnlineReservations.Implementation.DomainModels.TableStatus() { ID = 1 },
-                 new Iamopen.OnlineReservations.Implementation.DomainModels.TableStatus() { ID = 3 },
-                 new Iamopen.OnlineReservations.Implementation.DomainModels.TableStatus() { ID = 4 },
-                 new Iamopen.OnlineReservations.Implementation.DomainModels.TableStatus() { ID = 0 }
+                 new OnlineAvailability.Implementation.DomainModels.TableStatus() { ID = 1 },
+                 new OnlineAvailability.Implementation.DomainModels.TableStatus() { ID = 3 },
+                 new OnlineAvailability.Implementation.DomainModels.TableStatus() { ID = 4 },
+                 new OnlineAvailability.Implementation.DomainModels.TableStatus() { ID = 0 }
             };
             var count =   tableStatuses.Length;
             

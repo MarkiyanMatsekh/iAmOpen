@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using Iamopen.Common.ServiceModels;
-using Iamopen.OnlineReservations.Interface.Models;
+﻿using Iamopen.OnlineAvailability.Interface.Models;
 
-namespace Iamopen.OnlineReservations.Interface
+namespace Iamopen.OnlineAvailability.Interface
 {
-    public interface IReservationManager
+    public interface IAvailabilityManager
     {
         ReservationResult ReserveTable(ReservationInfo reservationInfo);
         CancelReservationResult CancelReservation(CancelReservationInfo cancelReservationInfo);

@@ -3,7 +3,7 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using IAmOpen.Site.Model.Concrete.Database;
 using IAmOpen.Site.Model.Initialization;
-using Iamopen.OnlineReservations.Implementation;
+using Iamopen.OnlineAvailability.Implementation;
 
 namespace Iamopen.Site
 {
@@ -32,7 +32,7 @@ namespace Iamopen.Site
 
             //Database.SetInitializer<InstitutionContext>(new InstitutionInitializer());
             
-            OnlineReservationManager.Init();
+            OnlineAvailabilityManager.Init();
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);

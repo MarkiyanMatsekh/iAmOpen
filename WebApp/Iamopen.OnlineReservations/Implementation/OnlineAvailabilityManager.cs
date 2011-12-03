@@ -2,23 +2,22 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Text;
 using Iamopen.Common.DB.StoredProcedures.SpResult;
 using Iamopen.Common.ServiceModels;
-using Iamopen.OnlineReservations.Implementation.DB;
-using Iamopen.OnlineReservations.Interface;
-using Iamopen.OnlineReservations.Interface.Models;
+using Iamopen.OnlineAvailability.Implementation.DB;
+using Iamopen.OnlineAvailability.Interface;
+using Iamopen.OnlineAvailability.Interface.Models;
 
-namespace Iamopen.OnlineReservations.Implementation
+namespace Iamopen.OnlineAvailability.Implementation
 {
-    public class OnlineReservationManager : IReservationManager, IDisposable
+    public class OnlineAvailabilityManager : IAvailabilityManager, IDisposable
     {
         // todo MM: maybe abstract this entity a bit
-        private readonly OnlineReservationsContext context;
+        private readonly OnlineAvailabilityContext context;
 
-        public OnlineReservationManager()
+        public OnlineAvailabilityManager()
         {
-            context = new OnlineReservationsContext();
+            context = new OnlineAvailabilityContext();
         }
 
 
@@ -103,7 +102,7 @@ namespace Iamopen.OnlineReservations.Implementation
 
         public static void Init()
         {
-            Database.SetInitializer(new OnlineReservationsInitializer());
+            Database.SetInitializer(new OnlineAvailabilityInitializer());
         }
     }
 }

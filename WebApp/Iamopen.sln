@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.Site.Tests", "Iamop
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.Site.Model", "Iamopen.Site.Model\Iamopen.Site.Model.csproj", "{780B5144-BE79-4758-8599-02270E272482}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.OnlineReservations", "Iamopen.OnlineReservations\Iamopen.OnlineReservations.csproj", "{89ECD9CF-4387-43F5-A413-4B9517E7575C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.OnlineAvailability", "Iamopen.OnlineReservations\Iamopen.OnlineAvailability.csproj", "{89ECD9CF-4387-43F5-A413-4B9517E7575C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.AvailabilitySyncService", "Iamopen.AvailabilitySyncService\Iamopen.AvailabilitySyncService.csproj", "{D18E633C-DAE3-470C-98E2-3C1EBD134016}"
 EndProject

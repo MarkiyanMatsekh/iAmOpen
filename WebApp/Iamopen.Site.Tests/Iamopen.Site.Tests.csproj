@@ -68,9 +68,9 @@
       <Project>{EDEAB994-B358-452F-BFFD-59713D81F340}</Project>
       <Name>Iamopen.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Iamopen.OnlineReservations\Iamopen.OnlineReservations.csproj">
+    <ProjectReference Include="..\Iamopen.OnlineReservations\Iamopen.OnlineAvailability.csproj">
       <Project>{89ECD9CF-4387-43F5-A413-4B9517E7575C}</Project>
-      <Name>Iamopen.OnlineReservations</Name>
+      <Name>Iamopen.OnlineAvailability</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

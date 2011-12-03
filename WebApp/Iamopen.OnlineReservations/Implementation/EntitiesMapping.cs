@@ -1,18 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using Iamopen.Common.Exceptions;
-using Iamopen.OnlineReservations.Implementation.DomainModels;
-using DomainModelTableStatus = Iamopen.OnlineReservations.Implementation.DomainModels.TableStatus;
-using ServiceModelTableStatus = Iamopen.Common.ServiceModels.TableStatus;
+using Iamopen.OnlineAvailability.Implementation.DomainModels;
+using TableStatus = Iamopen.Common.ServiceModels.TableStatus;
 
-namespace Iamopen.OnlineReservations.Implementation
+namespace Iamopen.OnlineAvailability.Implementation
 {
     public static class EntitiesMapping
     {
-        public static ServiceModelTableStatus MapTableStatus(DomainModelTableStatus domainModelTableStatus)
+        public static TableStatus MapTableStatus(DomainModels.TableStatus domainModelTableStatus)
         {
-            return Map<DomainModelTableStatus, ServiceModelTableStatus>(domainModelTableStatus);
+            return Map<DomainModels.TableStatus, TableStatus>(domainModelTableStatus);
         }
 
         public static TOut Map<TIn, TOut>(TIn dbEnum)

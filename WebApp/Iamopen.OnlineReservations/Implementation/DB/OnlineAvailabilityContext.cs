@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using Iamopen.Common.DB.StoredProcedures.SpResult;
-using Iamopen.OnlineReservations.Implementation.DB.StoredProcedures;
-using Iamopen.OnlineReservations.Implementation.DomainModels;
+using Iamopen.OnlineAvailability.Implementation.DB.StoredProcedures;
+using Iamopen.OnlineAvailability.Implementation.DomainModels;
 
-namespace Iamopen.OnlineReservations.Implementation.DB
+namespace Iamopen.OnlineAvailability.Implementation.DB
 {
-    public class OnlineReservationsContext : DbContext
+    public class OnlineAvailabilityContext : DbContext
     {
         public/*internal*/ DbSet<Institution> Institutions { get; set; }
         public/*internal*/ DbSet<Reservation> Reservations { get; set; }

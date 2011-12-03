@@ -1,7 +1,7 @@
 ﻿using System;
 using Iamopen.Common.ServiceModels;
 
-namespace Iamopen.OnlineReservations.Interface.Models
+namespace Iamopen.OnlineAvailability.Interface.Models
 {
     public class ReservationInfo
     {
