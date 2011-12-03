@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Iamopen.Availability.OnlineAvailability.Implementation.DomainModels;
+using Iamopen.Availability.Common.DB.DomainModels;
 
-namespace Iamopen.Availability.OnlineAvailability.Implementation.DB
+namespace Iamopen.Availability.Common.DB
 {
     public static class InitialData
     {

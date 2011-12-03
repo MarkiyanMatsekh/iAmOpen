@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Iamopen.Availability.OnlineAvailability.Implementation.DomainModels
+namespace Iamopen.Availability.Common.DB.DomainModels
 {
     public/*internal*/ class Institution
     {

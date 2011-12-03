@@ -14,10 +14,10 @@ namespace Iamopen.Site.Tests.OnlineReservationsTests
             // Arrange
             var tableStatuses = new[] 
             {
-                 new Availability.OnlineAvailability.Implementation.DomainModels.TableStatus() { ID = 1 },
-                 new Availability.OnlineAvailability.Implementation.DomainModels.TableStatus() { ID = 3 },
-                 new Availability.OnlineAvailability.Implementation.DomainModels.TableStatus() { ID = 4 },
-                 new Availability.OnlineAvailability.Implementation.DomainModels.TableStatus() { ID = 0 }
+                 new Availability.Common.DB.DomainModels.TableStatus() { ID = 1 },
+                 new Availability.Common.DB.DomainModels.TableStatus() { ID = 3 },
+                 new Availability.Common.DB.DomainModels.TableStatus() { ID = 4 },
+                 new Availability.Common.DB.DomainModels.TableStatus() { ID = 0 }
             };
             var count =   tableStatuses.Length;
             

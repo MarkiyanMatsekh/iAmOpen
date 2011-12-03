@@ -42,18 +42,10 @@
     <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\DB\OnlineAvailabilityInitializer.cs" />
+    <Compile Include="Implementation\DB\OnlineAvailabilityContext.cs" />
     <Compile Include="Implementation\DB\StoredProcedures\SpReserveTable.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Implementation\DomainModels\Institution.cs" />
-    <Compile Include="Implementation\DomainModels\Hall.cs" />
-    <Compile Include="Implementation\DomainModels\Table.cs" />
-    <Compile Include="Implementation\DomainModels\Enumerations.cs" />
-    <Compile Include="Implementation\DomainModels\Reservation.cs" />
-    <Compile Include="Implementation\DB\OnlineAvailabilityContext.cs" />
-    <Compile Include="Implementation\DB\InitialData.cs" />
-    <Compile Include="Implementation\EntitiesMapping.cs" />
     <Compile Include="Implementation\OnlineAvailabilityManager.cs" />
     <Compile Include="Interface\Models\CancelReservationModel.cs" />
     <Compile Include="Interface\Models\InstitutionsStatisticsModel.cs" />
@@ -68,6 +60,10 @@
     <ProjectReference Include="..\..\Iamopen.Common\Iamopen.Common\Iamopen.Common.csproj">
       <Project>{EDEAB994-B358-452F-BFFD-59713D81F340}</Project>
       <Name>Iamopen.Common %28Iamopen.Common\Iamopen.Common%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Iamopen.Availability.Common\Iamopen.Availability.Common.csproj">
+      <Project>{E41413AB-266D-473A-93F5-E37A1AA0D4D5}</Project>
+      <Name>Iamopen.Availability.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

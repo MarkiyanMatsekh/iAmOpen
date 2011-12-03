@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.SqlClient;
-using Iamopen.Availability.OnlineAvailability.Implementation.DomainModels;
+using Iamopen.Availability.Common.DB.DomainModels;
 using Iamopen.Common.DB.StoredProcedures.StoredProcedure;
 using Iamopen.Common.Exceptions;
 

@@ -1,12 +1,11 @@
 ﻿using System.Data.Entity;
 
-namespace Iamopen.Availability.OnlineAvailability.Implementation.DB
+namespace Iamopen.Availability.Common.DB
 {
-    // todo MM: change strategy to DropCreateDatabaseIfModelChanged
-    public/*internal*/ class OnlineAvailabilityInitializer : DropCreateDatabaseIfModelChanges<OnlineAvailabilityContext>
+    public/*internal*/ class AvailabilityInitializer : DropCreateDatabaseIfModelChanges<AvailabilityContext>
     {
 
-        protected override void Seed(OnlineAvailabilityContext context)
+        protected override void Seed(AvailabilityContext context)
         {
             InitialData.ResponseTypes.ForEach(rt => context.ResponseTypes.Add(rt));
             InitialData.InstitutionServiceTypes.ForEach(st => context.ServiceTypes.Add(st));

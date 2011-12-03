@@ -18,5 +18,10 @@ namespace IAmOpen.Site.Model.Models.Base
             var typedObj = obj as EntityWithID<TID>;
             return typedObj != null && this.Equals(typedObj);
         }
+
+        public override int GetHashCode()
+        {
+            return ID.GetHashCode();
+        }
     }
 }

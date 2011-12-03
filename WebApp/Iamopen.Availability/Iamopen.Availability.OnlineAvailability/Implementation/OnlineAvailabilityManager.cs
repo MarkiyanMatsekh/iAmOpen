@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using Iamopen.Availability.Common.DB;
 using Iamopen.Availability.OnlineAvailability.Implementation.DB;
 using Iamopen.Availability.OnlineAvailability.Interface;
 using Iamopen.Availability.OnlineAvailability.Interface.Models;
@@ -102,7 +103,7 @@ namespace Iamopen.Availability.OnlineAvailability.Implementation
 
         public static void Init()
         {
-            Database.SetInitializer(new OnlineAvailabilityInitializer());
+            Database.SetInitializer(new AvailabilityInitializer());
         }
     }
 }

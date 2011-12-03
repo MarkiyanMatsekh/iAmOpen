@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Iamopen.Availability.OnlineAvailability.Implementation.DomainModels
+namespace Iamopen.Availability.Common.DB.DomainModels
 {
     public/*internal*/ class Hall
     {

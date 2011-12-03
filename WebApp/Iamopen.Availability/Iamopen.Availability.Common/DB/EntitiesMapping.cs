@@ -1,9 +1,9 @@
 ﻿using System;
-using Iamopen.Availability.OnlineAvailability.Implementation.DomainModels;
+using Iamopen.Availability.Common.DB.DomainModels;
 using Iamopen.Common.Exceptions;
 using TableStatus = Iamopen.Common.ServiceModels.TableStatus;
 
-namespace Iamopen.Availability.OnlineAvailability.Implementation
+namespace Iamopen.Availability.Common.DB
 {
     public static class EntitiesMapping
     {
