@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Web.Mvc;
 using System.Data;
 using IAmOpen.Site.Model.Abstractions;
@@ -129,20 +130,28 @@ namespace Iamopen.Site.Controllers
         {
             Institution institution = unitOfWork.InstitutionRepository.GetByID(id);
             unitOfWork.InstitutionRepository.Delete(institution);
-            //unitOfWork.Save();
+            unitOfWork.Save();
             return RedirectToAction("Index");
         }
 
 
         public ActionResult OnlineAvailability(int id)
         {
-            IReservationManager reservationManager = new OnlineReservationManager();
-            var data = reservationManager.GetInstitutionOnlineStatus(
-                new InstitutionOnlineStatusRequestInfo
-                    {
-                        InstitutionID = id
-                    });
-
+            InstitutionOnlineStatusRequestResult data;
+            using (var reservationManager = new OnlineReservationManager())
+            {
+                var d = reservationManager.ReserveTable(new ReservationInfo()
+                                                            {
+                                                                TableID = 5,
+                                                                UserInfo = new UserInfo() { UserSID = 1 },
+                                                                ReservationTime = DateTime.Now
+                                                            });
+                data = reservationManager.GetInstitutionOnlineStatus(
+                       new InstitutionOnlineStatusRequestInfo
+                       {
+                           InstitutionID = id
+                       });
+            }
             return View(data);
         }
 

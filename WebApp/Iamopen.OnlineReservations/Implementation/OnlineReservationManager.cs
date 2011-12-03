@@ -48,11 +48,6 @@ namespace Iamopen.OnlineReservations.Implementation
 
         public InstitutionOnlineStatusRequestResult GetInstitutionOnlineStatus(InstitutionOnlineStatusRequestInfo info)
         {
-            var ts = new Iamopen.OnlineReservations.Implementation.DomainModels.TableStatus() { ID = 1 };
-
-
-
-
             List<HallInfo> halls;
             try
             {

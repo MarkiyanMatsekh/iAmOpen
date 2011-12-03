@@ -11,7 +11,7 @@ using Iamopen.OnlineReservations.Implementation.DomainModels;
 namespace Iamopen.OnlineReservations.Implementation.DB
 {
     // todo MM: change strategy to DropCreateDatabaseIfModelChanged
-    public/*internal*/ class OnlineReservationsInitializer : DropCreateDatabaseAlways<OnlineReservationsContext>
+    public/*internal*/ class OnlineReservationsInitializer : DropCreateDatabaseIfModelChanges<OnlineReservationsContext>
     {
 
         protected override void Seed(OnlineReservationsContext context)
