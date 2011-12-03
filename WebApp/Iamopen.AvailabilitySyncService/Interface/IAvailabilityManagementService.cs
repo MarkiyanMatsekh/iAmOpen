@@ -1,11 +1,11 @@
 ﻿using System.ServiceModel;
-using Iamopen.AvailabilitySyncService.Interface.Models;
+using Iamopen.AMS.Interface.Models;
 using Iamopen.Common.ServiceModels;
 
-namespace Iamopen.AvailabilitySyncService.Interface
+namespace Iamopen.AMS.Interface
 {
     [ServiceContract]
-    public interface IAvailabilitySyncService
+    public interface IAvailabilityManagementService
     {
         [OperationContract]
         OperationResult ChangeTableStatus(ChangeTableStatusInfo tableStatusInfo);

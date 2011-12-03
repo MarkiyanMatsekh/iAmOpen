@@ -9,9 +9,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.Site.Model", "Iamop
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.OnlineAvailability", "Iamopen.OnlineReservations\Iamopen.OnlineAvailability.csproj", "{89ECD9CF-4387-43F5-A413-4B9517E7575C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.AvailabilitySyncService", "Iamopen.AvailabilitySyncService\Iamopen.AvailabilitySyncService.csproj", "{D18E633C-DAE3-470C-98E2-3C1EBD134016}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.AMS", "Iamopen.AvailabilitySyncService\Iamopen.AMS.csproj", "{D18E633C-DAE3-470C-98E2-3C1EBD134016}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.Common", "Iamopen.Common\Iamopen.Common.csproj", "{EDEAB994-B358-452F-BFFD-59713D81F340}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Iamopen.Availability", "Iamopen.Availability", "{A2C15417-CC1F-4C6A-8E87-663402F0198F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Iamopen.Site", "Iamopen.Site", "{7BA85894-595F-4C80-91EC-0834BD27CB10}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,5 +49,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{89ECD9CF-4387-43F5-A413-4B9517E7575C} = {A2C15417-CC1F-4C6A-8E87-663402F0198F}
+		{D18E633C-DAE3-470C-98E2-3C1EBD134016} = {A2C15417-CC1F-4C6A-8E87-663402F0198F}
+		{BB059895-2474-4B16-A633-8EF108B829FC} = {7BA85894-595F-4C80-91EC-0834BD27CB10}
+		{7B2C153A-75E2-468D-95A4-FFC830FD8071} = {7BA85894-595F-4C80-91EC-0834BD27CB10}
+		{780B5144-BE79-4758-8599-02270E272482} = {7BA85894-595F-4C80-91EC-0834BD27CB10}
 	EndGlobalSection
 EndGlobal

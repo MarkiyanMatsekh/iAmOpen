@@ -10,8 +10,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Iamopen.AvailabilitySyncService</RootNamespace>
-    <AssemblyName>Iamopen.AvailabilitySyncService</AssemblyName>
+    <RootNamespace>Iamopen.AMS</RootNamespace>
+    <AssemblyName>Iamopen.AMS</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -51,14 +51,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Service.svc" />
-    <Content Include="Web.config" />
+    <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\AvailabilityManagementService.cs" />
     <Compile Include="Interface\Models\ChangeTableStatusModel.cs" />
     <Compile Include="Interface\Models\UpdateStatusModel.cs" />
     <Compile Include="Interface\Models\ReportReservationResultModel.cs" />
     <Compile Include="Interface\Models\RespondToReservationModel.cs" />
-    <Compile Include="Interface\IAvailabilitySyncService.cs" />
+    <Compile Include="Interface\IAvailabilityManagementService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
