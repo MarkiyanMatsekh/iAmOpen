@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace Iamopen.AMS.Interface.Models
+namespace Iamopen.Availability.AMS.Interface.Models
 {
     [DataContract]
     public class ActualReservationResult

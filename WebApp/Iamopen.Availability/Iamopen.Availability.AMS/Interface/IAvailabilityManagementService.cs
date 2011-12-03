@@ -1,8 +1,8 @@
 ﻿using System.ServiceModel;
-using Iamopen.AMS.Interface.Models;
+using Iamopen.Availability.AMS.Interface.Models;
 using Iamopen.Common.ServiceModels;
 
-namespace Iamopen.AMS.Interface
+namespace Iamopen.Availability.AMS.Interface
 {
     [ServiceContract]
     public interface IAvailabilityManagementService

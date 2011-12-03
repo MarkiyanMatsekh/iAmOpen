@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using Iamopen.AMS.Interface;
-using Iamopen.AMS.Interface.Models;
+using Iamopen.Availability.AMS.Interface;
+using Iamopen.Availability.AMS.Interface.Models;
 using Iamopen.Common.ServiceModels;
 
-namespace Iamopen.AMS.Implementation
+namespace Iamopen.Availability.AMS.Implementation
 {
     public class AvailabilityManagementService : IAvailabilityManagementService 
     {
