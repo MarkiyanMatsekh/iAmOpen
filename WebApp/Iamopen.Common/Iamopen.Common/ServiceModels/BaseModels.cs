@@ -49,6 +49,8 @@ namespace Iamopen.Common.ServiceModels
         [EnumMember]
         OK = 0,
         [EnumMember]
-        Fail = 1
+        Fail = 1,
+        [EnumMember]
+        NotChanged
     }
 }

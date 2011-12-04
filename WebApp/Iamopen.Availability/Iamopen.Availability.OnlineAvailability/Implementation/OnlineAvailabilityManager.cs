@@ -103,7 +103,8 @@ namespace Iamopen.Availability.OnlineAvailability.Implementation
 
         public static void Init()
         {
-            Database.SetInitializer(new AvailabilityInitializer());
+            // TODO MM: find out why sometimes the issue with"login failed" appears
+            Database.SetInitializer<OnlineAvailabilityContext>(new AvailabilityInitializer());
         }
     }
 }

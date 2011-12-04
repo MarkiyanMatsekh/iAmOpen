@@ -20,9 +20,10 @@ namespace Iamopen.Availability.Common.DB
 
         private static List<ReservationStatus> reservationStatuses = new List<ReservationStatus>
         {
-            new ReservationStatus {ID = 1, Name="ReservedByCafe"},
-            new ReservationStatus {ID = 2, Name="RequestSent"},
-            new ReservationStatus {ID = 3, Name="Confirmed"},
+            new ReservationStatus {ID = 1, Name="ReservedByInstitution"},
+            new ReservationStatus {ID = 2, Name="RequestSentByIAmOpenUser"},
+            new ReservationStatus {ID = 3, Name="RequestConfirmedByInstitution"},
+            new ReservationStatus {ID = 4, Name="ReservationCanceledByUser"}
         };
 
         private static List<TableStatus> tableStatuses = new List<TableStatus>
@@ -95,11 +96,11 @@ namespace Iamopen.Availability.Common.DB
 
         private static List<Reservation> reservations = new List<Reservation>
         {
-            new Reservation {TableID = 1, Time = DateTime.Now, StatusID = 1, CustomerID = 1, Public = true},
-            new Reservation {TableID = 2, Time = DateTime.Now, StatusID = 3, CustomerID = 10, Public = false},
-            new Reservation {TableID = 3, Time = DateTime.Now, StatusID = 1, CustomerID = 45, Public = true},
-            new Reservation {TableID = 7, Time = DateTime.Now, StatusID = 2, CustomerID = 7, Public = false},
-            new Reservation {TableID = 10, Time = DateTime.Now, StatusID = 2, CustomerID = 97, Public = false}
+            new Reservation {TableID = 1,  ReservationTime = DateTime.Now,CreationTime = DateTime.Now.AddHours(-1), StatusID = 1, CustomerID = 1, Public = true},
+            new Reservation {TableID = 2,  ReservationTime = DateTime.Now,CreationTime = DateTime.Now.AddHours(-1), StatusID = 3, CustomerID = 10, Public = false},
+            new Reservation {TableID = 3,  ReservationTime = DateTime.Now,CreationTime = DateTime.Now.AddHours(-2), StatusID = 1, CustomerID = 45, Public = true},
+            new Reservation {TableID = 7,  ReservationTime = DateTime.Now,CreationTime = DateTime.Now.AddHours(-1), StatusID = 2, CustomerID = 7, Public = false},
+            new Reservation {TableID = 10, ReservationTime = DateTime.Now,CreationTime = DateTime.Now.AddHours(-3), StatusID = 2, CustomerID = 97, Public = false}
         };
 
         public static List<InstitutionResponseType> ResponseTypes { get { return responseTypes; } }

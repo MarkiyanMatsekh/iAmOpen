@@ -23,6 +23,8 @@ namespace Iamopen.Availability.AMS.TestClient
         {
             InitializeComponent();
 
+              
+
             var table = new TableControl(Root, 10, 10);
             var table2 = new TableControl(Root, 50, 50);
 

@@ -16,7 +16,18 @@ namespace Iamopen.Common.ServiceModels
         Busy = 2,
         [EnumMember]
         Reserved = 3
+    }
 
-
+    [DataContract]
+    public enum ReservationStatus
+    {
+        [EnumMember]
+        ReservedByInstitution = 1,
+        [EnumMember]
+        RequestSentByIAmOpenUser = 2,
+        [EnumMember]
+        RequestConfirmedByInstitution = 3,
+        [EnumMember]
+        ReservationCanceledByUser = 4
     }
 }

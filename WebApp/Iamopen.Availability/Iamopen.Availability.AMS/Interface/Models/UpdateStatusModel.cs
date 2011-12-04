@@ -19,6 +19,10 @@ namespace Iamopen.Availability.AMS.Interface.Models
         public List<ReservationInfo> NewReservations;
         [DataMember]
         public List<ReservationCancellationInfo> CanceledReservations;
+
+        public UpdateStatusResult(ResultCode code) : base(code)
+        {
+        }
     }
 
     [DataContract]
