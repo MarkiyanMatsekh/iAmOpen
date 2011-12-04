@@ -12,6 +12,11 @@ namespace Iamopen.Availability.Common.DB
             return Map<DomainModels.TableStatus, TableStatus>(domainModelTableStatus);
         }
 
+        public static  DomainModels.TableStatus MapTableStatus(TableStatus serviceModelTableStatus)
+        {
+            return MapOut<DomainModels.TableStatus>((int)serviceModelTableStatus);
+        }
+
         public static TOut Map<TIn, TOut>(TIn dbEnum)
             where TIn : Enumeration
         {
@@ -21,5 +26,11 @@ namespace Iamopen.Availability.Common.DB
                     String.Format("Cannot cast Domain model table status to Service model table status. Value {0} is not supported", enumID));
             return (TOut)Enum.ToObject(typeof(TOut), enumID);
         }
+
+        public static TOut MapOut<TOut>(int enumID) where TOut : Enumeration, new()
+        {
+            return new TOut { ID = enumID };
+        }
+
     }
 }

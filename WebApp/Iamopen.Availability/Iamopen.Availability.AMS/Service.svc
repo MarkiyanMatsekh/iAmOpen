@@ -1,1 +1,4 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Iamopen.AvailabilitySyncService.Service1" %>
+﻿<%@ ServiceHost Language="C#" 
+Debug="true" 
+Service="Iamopen.Availability.AMS.Implementation.AvailabilityManagementService" %>
+
