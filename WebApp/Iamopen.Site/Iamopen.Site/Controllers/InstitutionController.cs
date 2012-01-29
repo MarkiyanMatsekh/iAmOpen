@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web.Mvc;
 using System.Data;
 using IAmOpen.Site.Model.Abstractions;
+using IAmOpen.Site.Model.Concrete.Database;
 using IAmOpen.Site.Model.Models;
 using Iamopen.Availability.OnlineAvailability.Implementation;
 using Iamopen.Availability.OnlineAvailability.Interface.Models;
@@ -78,6 +80,15 @@ namespace Iamopen.Site.Controllers
 
         public ActionResult Edit(int id)
         {
+            // MM: example calling stored procedure
+
+            //using (InstitutionContext context = new InstitutionContext())
+            //{
+            //    var c = context.Database.SqlQuery<Institution>("TestProc @InstitutionID",
+            //        new SqlParameter("InstitutionID", 3));
+            //    var f = c.ToList();
+            //}
+            
             Institution institution = unitOfWork.InstitutionRepository.GetByID(id);
             FillStatuses(institution.StatusID);
             FillStates(institution.StateID);
@@ -139,12 +150,21 @@ namespace Iamopen.Site.Controllers
             InstitutionOnlineStatusRequestResult data;
             using (var reservationManager = new OnlineAvailabilityManager())
             {
+                // note MM: very serious bug fixed. concerning dll Hell. 
+                // When invoking context.Database.SqlQuery<>() ... from assemly IAmOpen.Common AccessViolation was thrown 
+                // this was because this assembly had a reference to EntityFramework.dll , v4.0, and all others had v4.1 with support of sql queries
+                // If anything similar happens - change reference of a library to a local copy (in lib folder)
+                
+                // now, stored procedures are safely invoked, but still with few bugs, that dont let use this funcitonality
+
                 //var d = reservationManager.ReserveTable(new ReservationInfo()
                 //                                            {
                 //                                                TableID = 5,
                 //                                                UserInfo = new UserInfo() { UserSID = 1 },
                 //                                                ReservationTime = DateTime.Now
                 //                                            });
+
+
                 data = reservationManager.GetInstitutionOnlineStatus(
                        new InstitutionOnlineStatusRequestInfo
                        {
