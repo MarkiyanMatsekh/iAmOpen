@@ -48,9 +48,9 @@ namespace Iamopen.Common.DB.StoredProcedures.StoredProcedure
 
         protected virtual IEnumerable<TRecord> CoreBuildQuery()
         {
-            // TODO MM CRITICAL: find out how to use _params as an array
             // TODO MM: find out how to receive data in type TRecord( currently all non-db-table entities are returned as default valued objects)
-            return _context.Database.SqlQuery<TRecord>(_spInvokationString, _params[0], _params[1], _params[2]);
+
+            return _context.Database.SqlQuery<TRecord>(_spInvokationString, _params.Cast<object>().ToArray());
         }
 
         protected abstract TResult ReturnFailedResult(string errorMessage);
