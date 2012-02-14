@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f4afff78-defb-48b7-8da3-9bda0eb06216" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8081/service.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="5b98a3f7-cb55-4ae0-87cc-86d4b84e6df6" SourceId="1" SourceUrl="http://harry:8081/service.svc?xsd=xsd3" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="bc30ad93-0306-4917-95c3-5687a13d51fc" SourceId="1" SourceUrl="http://harry:8081/service.svc?xsd=xsd2" />
+    <MetadataFile FileName="AvailabilityManagementService.wsdl" MetadataType="Wsdl" ID="96f5f10e-b1e3-48f2-8bde-41a16d5e7b5e" SourceId="1" SourceUrl="http://harry:8081/service.svc?wsdl" />
+    <MetadataFile FileName="service.disco" MetadataType="Disco" ID="df20b196-33b5-4550-8f3f-b4374d353353" SourceId="1" SourceUrl="http://harry:8081/service.svc?disco" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="cac3b2ea-7142-4acd-8880-b516188dc7e1" SourceId="1" SourceUrl="http://harry:8081/service.svc?xsd=xsd1" />
+    <MetadataFile FileName="service3.xsd" MetadataType="Schema" ID="ac13aefd-99ab-4882-be89-0e6e174101cd" SourceId="1" SourceUrl="http://harry:8081/service.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

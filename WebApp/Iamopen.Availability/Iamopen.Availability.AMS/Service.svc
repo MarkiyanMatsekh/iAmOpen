@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost Language="C#" 
+Debug="true" 
+Service="Iamopen.Availability.AMS.Implementation.AvailabilityManagementService" %>
+

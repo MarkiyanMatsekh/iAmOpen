@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E41413AB-266D-473A-93F5-E37A1AA0D4D5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Iamopen.Availability.Common</RootNamespace>
+    <AssemblyName>Iamopen.Availability.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB\InitialData.cs" />
+    <Compile Include="DB\AvailabilityContext.cs" />
+    <Compile Include="DB\AvailabilityInitializer.cs" />
+    <Compile Include="DB\DomainModels\Enumerations.cs" />
+    <Compile Include="DB\DomainModels\Hall.cs" />
+    <Compile Include="DB\DomainModels\Institution.cs" />
+    <Compile Include="DB\DomainModels\Reservation.cs" />
+    <Compile Include="DB\DomainModels\Table.cs" />
+    <Compile Include="DB\EntitiesMapping.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Iamopen.Common\Iamopen.Common\Iamopen.Common.csproj">
+      <Project>{EDEAB994-B358-452F-BFFD-59713D81F340}</Project>
+      <Name>Iamopen.Common %28Iamopen.Common\Iamopen.Common%29</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
