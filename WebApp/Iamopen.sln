@@ -26,7 +26,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.Availability.AMS.Pr
 		{D18E633C-DAE3-470C-98E2-3C1EBD134016} = {D18E633C-DAE3-470C-98E2-3C1EBD134016}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.Availability.AMS.TestClient", "Iamopen.Availability.AMS.TestClient\Iamopen.Availability.AMS.TestClient.csproj", "{7B8E4DBF-9201-4C5C-B59B-9AC62C44E21A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iamopen.Availability.AMS.TestClient", "Iamopen.Availability\Iamopen.Availability.AMS.TestClient\Iamopen.Availability.AMS.TestClient.csproj", "{7B8E4DBF-9201-4C5C-B59B-9AC62C44E21A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -118,6 +118,7 @@ Global
 		{CCB0A89E-1CCE-4ECE-B66A-D311290DF8D5}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{CCB0A89E-1CCE-4ECE-B66A-D311290DF8D5}.Release|x86.ActiveCfg = Release|Any CPU
 		{7B8E4DBF-9201-4C5C-B59B-9AC62C44E21A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{7B8E4DBF-9201-4C5C-B59B-9AC62C44E21A}.Debug|Any CPU.Build.0 = Debug|x86
 		{7B8E4DBF-9201-4C5C-B59B-9AC62C44E21A}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{7B8E4DBF-9201-4C5C-B59B-9AC62C44E21A}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{7B8E4DBF-9201-4C5C-B59B-9AC62C44E21A}.Debug|x86.ActiveCfg = Debug|x86
