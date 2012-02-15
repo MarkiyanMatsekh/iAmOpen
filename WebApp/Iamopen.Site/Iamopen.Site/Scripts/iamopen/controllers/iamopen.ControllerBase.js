@@ -2,10 +2,10 @@
 
    $.Controller('iamopen.ControllerBase', {
 
-      invokeAction: function (_action, sender, event) {
+      invokeAction: function (_action, sender, event, data) {
 
          // todo MM: investigate why this._actionProto != window.iamopen.Action in here
-         var action = new (this._getActionProto())(_action, this, sender, event);
+         var action = new (this._getActionProto())(_action, this, sender, event, data);
 
          safeInvoke.call(action, action.readParams, [], action.onReadParamsFailed, function (params) {
             safeInvoke.call(action, action.process, params, action.onProcessFailed, function (data) {

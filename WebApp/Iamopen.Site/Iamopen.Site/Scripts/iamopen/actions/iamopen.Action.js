@@ -1,9 +1,10 @@
 ﻿$.Class.extend('iamopen.Action', {
-   init: function (action, controller, sender, event) {
+   init: function (action, controller, sender, event, data) {
       $.extend(this, action);
       this.controller = controller;
       this.sender = sender;
       this.event = event;
+      this.data = data;
       this.base = this.constructor.prototype; // only shortcut
    },
    readParams: function () {
